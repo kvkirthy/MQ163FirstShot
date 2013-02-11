@@ -24,6 +24,9 @@
 		10A2660016C7A67A00627C27 /* MQSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A265FF16C7A67A00627C27 /* MQSecondViewController.m */; };
 		10A2660216C7A67A00627C27 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 10A2660116C7A67A00627C27 /* second.png */; };
 		10A2660416C7A67A00627C27 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10A2660316C7A67A00627C27 /* second@2x.png */; };
+		10A2660D16C7C3A400627C27 /* CreatePosts.png in Resources */ = {isa = PBXBuildFile; fileRef = 10A2660C16C7C3A400627C27 /* CreatePosts.png */; };
+		10A2661016C7C4FA00627C27 /* MQPersonEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A2660F16C7C4FA00627C27 /* MQPersonEntity.m */; };
+		10A2661316C7C7DF00627C27 /* MQCreateViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A2661216C7C7DF00627C27 /* MQCreateViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,11 @@
 		10A265FF16C7A67A00627C27 /* MQSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQSecondViewController.m; sourceTree = "<group>"; };
 		10A2660116C7A67A00627C27 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		10A2660316C7A67A00627C27 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		10A2660C16C7C3A400627C27 /* CreatePosts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CreatePosts.png; sourceTree = "<group>"; };
+		10A2660E16C7C4FA00627C27 /* MQPersonEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQPersonEntity.h; sourceTree = "<group>"; };
+		10A2660F16C7C4FA00627C27 /* MQPersonEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQPersonEntity.m; sourceTree = "<group>"; };
+		10A2661116C7C7DF00627C27 /* MQCreateViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQCreateViewModel.h; sourceTree = "<group>"; };
+		10A2661216C7C7DF00627C27 /* MQCreateViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQCreateViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,10 @@
 				10A2660116C7A67A00627C27 /* second.png */,
 				10A2660316C7A67A00627C27 /* second@2x.png */,
 				10A265E016C7A67900627C27 /* Supporting Files */,
+				10A2660E16C7C4FA00627C27 /* MQPersonEntity.h */,
+				10A2660F16C7C4FA00627C27 /* MQPersonEntity.m */,
+				10A2661116C7C7DF00627C27 /* MQCreateViewModel.h */,
+				10A2661216C7C7DF00627C27 /* MQCreateViewModel.m */,
 			);
 			path = MQ163FirstShot;
 			sourceTree = "<group>";
@@ -116,6 +128,7 @@
 		10A265E016C7A67900627C27 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				10A2660C16C7C3A400627C27 /* CreatePosts.png */,
 				10A265E116C7A67900627C27 /* MQ163FirstShot-Info.plist */,
 				10A265E216C7A67900627C27 /* InfoPlist.strings */,
 				10A265E516C7A67900627C27 /* main.m */,
@@ -189,6 +202,7 @@
 				10A265FD16C7A67A00627C27 /* first@2x.png in Resources */,
 				10A2660216C7A67A00627C27 /* second.png in Resources */,
 				10A2660416C7A67A00627C27 /* second@2x.png in Resources */,
+				10A2660D16C7C3A400627C27 /* CreatePosts.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +217,8 @@
 				10A265EA16C7A67900627C27 /* MQAppDelegate.m in Sources */,
 				10A265F916C7A67A00627C27 /* MQFirstViewController.m in Sources */,
 				10A2660016C7A67A00627C27 /* MQSecondViewController.m in Sources */,
+				10A2661016C7C4FA00627C27 /* MQPersonEntity.m in Sources */,
+				10A2661316C7C7DF00627C27 /* MQCreateViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

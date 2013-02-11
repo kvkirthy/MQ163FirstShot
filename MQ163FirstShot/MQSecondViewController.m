@@ -20,6 +20,10 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;//[self.dataController countOfList];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

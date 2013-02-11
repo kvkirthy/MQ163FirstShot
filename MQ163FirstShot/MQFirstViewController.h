@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MQFirstViewController : UIViewController
+@class MQCreateViewModel;
+@interface MQFirstViewController : UITableViewController
+
+@property (strong, nonatomic) MQCreateViewModel *viewModel;
 
 @end
