@@ -11,15 +11,55 @@
 #import "MQPersonEntity.h"
 
 @interface MQFirstViewController ()
-
+- (void) populateLeads;
+-(void) populateCustomers;
 @end
 
 @implementation MQFirstViewController
+
+-(void) populateLeads
+{
+    [self.viewModel addPersonToProfile:[[MQPersonEntity alloc] initWithName:@"Sachin Tendulkar" email:@"sachin@tendulkar.com"]];
+    
+    [self.viewModel addPersonToProfile:[[MQPersonEntity alloc] initWithName:@"Rahul Dravid" email:@"rahul@dravid.com"]];
+    
+    [self.viewModel addPersonToProfile:[[MQPersonEntity alloc] initWithName:@"Sourav Ganguly" email:@"sourav@ganguly.com"]];
+    
+    [self.viewModel addPersonToProfile:[[MQPersonEntity alloc] initWithName:@"Mahi Dhoni" email:@"mahi@dhoni.com"]];
+}
+
+-(void) populateCustomers
+{
+    [self.viewModel addPersonToProfile:[[MQPersonEntity alloc] initWithName:@"Tom Hanks" email:@"Tom@Hanks.com"]];
+    [self.viewModel addPersonToProfile:[[MQPersonEntity alloc] initWithName:@"Liam Neeson" email:@"Liam@Neeson.com"]];
+    [self.viewModel addPersonToProfile:[[MQPersonEntity alloc] initWithName:@"Jack Hugman" email:@"Jack@Hugman.com"]];
+    [self.viewModel addPersonToProfile:[[MQPersonEntity alloc] initWithName:@"Robert Dowling Jr" email:@"Robert@Dowling.com"]];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+ - (IBAction) segmentedControlIndexChanged
+{
+    [self.viewModel clearViewModel];
+    if(segmentedControl.selectedSegmentIndex ==0 )
+    {
+        [self populateLeads];
+    }
+    else if (segmentedControl.selectedSegmentIndex ==1 )
+    {
+        [self populateCustomers];
+    }
+    else if (segmentedControl.selectedSegmentIndex ==2 )
+    {
+        [self populateLeads];
+        [self populateCustomers];
+    }
+    [self.tableView reloadData];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -33,6 +73,7 @@
     [super awakeFromNib];
     
     self.viewModel = [[MQCreateViewModel alloc] init];
+    [self populateLeads];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

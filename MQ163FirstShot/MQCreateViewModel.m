@@ -18,32 +18,6 @@
 {
     self.potentialProfiles = [[NSMutableArray alloc] init];
     
-    [self.potentialProfiles addObject: [[MQPersonEntity alloc] initWithName:@"Sachin Tendulkar" email:@"sachin@tendulkar.com"]];
-    
-    [self.potentialProfiles addObject: [[MQPersonEntity alloc] initWithName:@"Rahul Dravid" email:@"rahul@dravid.com"]];
-    
-    [self.potentialProfiles addObject: [[MQPersonEntity alloc] initWithName:@"Sourav Ganguly" email:@"sourav@ganguly.com"]];
-    
-    [self.potentialProfiles addObject: [[MQPersonEntity alloc] initWithName:@"Mahi Dhoni" email:@"mahi@dhoni.com"]];
-    
-    
-    [self.potentialProfiles addObject: [[MQPersonEntity alloc] initWithName:@"Sachin Tendulkar" email:@"sachin@tendulkar.com"]];
-    
-    [self.potentialProfiles addObject: [[MQPersonEntity alloc] initWithName:@"Rahul Dravid" email:@"rahul@dravid.com"]];
-    
-    [self.potentialProfiles addObject: [[MQPersonEntity alloc] initWithName:@"Sourav Ganguly" email:@"sourav@ganguly.com"]];
-    
-    [self.potentialProfiles addObject: [[MQPersonEntity alloc] initWithName:@"Mahi Dhoni" email:@"mahi@dhoni.com"]];
-    
-    
-    [self.potentialProfiles addObject: [[MQPersonEntity alloc] initWithName:@"Sachin Tendulkar" email:@"sachin@tendulkar.com"]];
-    
-    [self.potentialProfiles addObject: [[MQPersonEntity alloc] initWithName:@"Rahul Dravid" email:@"rahul@dravid.com"]];
-    
-    [self.potentialProfiles addObject: [[MQPersonEntity alloc] initWithName:@"Sourav Ganguly" email:@"sourav@ganguly.com"]];
-    
-    [self.potentialProfiles addObject: [[MQPersonEntity alloc] initWithName:@"Mahi Dhoni" email:@"mahi@dhoni.com"]];
-    
     return self;
 }
 
@@ -63,6 +37,11 @@
 -(NSUInteger) getCountOfPersons
 {
     return [self.potentialProfiles count];
+}
+
+-(void) clearViewModel
+{
+    [self.potentialProfiles removeAllObjects];
 }
 
 -(void) addPersonToProfile:(MQPersonEntity *)person

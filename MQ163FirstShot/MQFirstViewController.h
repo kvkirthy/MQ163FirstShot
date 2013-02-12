@@ -10,7 +10,12 @@
 
 @class MQCreateViewModel;
 @interface MQFirstViewController : UITableViewController
+{
+    IBOutlet UISegmentedControl *segmentedControl;
+}
 
 @property (strong, nonatomic) MQCreateViewModel *viewModel;
+
+-(IBAction) segmentedControlIndexChanged;
 
 @end

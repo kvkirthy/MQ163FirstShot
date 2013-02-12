@@ -18,6 +18,8 @@
 
 -(void) addPersonToProfile: (MQPersonEntity *) person;
 
+-(void) clearViewModel;
+
 -(MQPersonEntity *) getPersonEntityAtIndex: (NSUInteger) index;
 
 @end
