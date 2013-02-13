@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1002A39D16C9891B001F910B /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002A39C16C9891B001F910B /* 112-group.png */; };
-		1002A39F16C989AE001F910B /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002A39E16C989AE001F910B /* 20-gear2.png */; };
 		10A265DA16C7A67900627C27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A265D916C7A67900627C27 /* UIKit.framework */; };
 		10A265DC16C7A67900627C27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A265DB16C7A67900627C27 /* Foundation.framework */; };
 		10A265DE16C7A67900627C27 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A265DD16C7A67900627C27 /* CoreGraphics.framework */; };
@@ -28,11 +27,12 @@
 		10A2660416C7A67A00627C27 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10A2660316C7A67A00627C27 /* second@2x.png */; };
 		10A2661016C7C4FA00627C27 /* MQPersonEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A2660F16C7C4FA00627C27 /* MQPersonEntity.m */; };
 		10A2661316C7C7DF00627C27 /* MQCreateViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A2661216C7C7DF00627C27 /* MQCreateViewModel.m */; };
+		10C48DC116CB227B00AE041C /* 91-beaker-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C48DC016CB227B00AE041C /* 91-beaker-2.png */; };
+		10C48DC316CB23A100AE041C /* 154-necktie.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C48DC216CB23A100AE041C /* 154-necktie.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1002A39C16C9891B001F910B /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
-		1002A39E16C989AE001F910B /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2.png"; sourceTree = "<group>"; };
 		10A265D616C7A67900627C27 /* MQ163FirstShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MQ163FirstShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A265D916C7A67900627C27 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		10A265DB16C7A67900627C27 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,6 +60,8 @@
 		10A2660F16C7C4FA00627C27 /* MQPersonEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQPersonEntity.m; sourceTree = "<group>"; };
 		10A2661116C7C7DF00627C27 /* MQCreateViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQCreateViewModel.h; sourceTree = "<group>"; };
 		10A2661216C7C7DF00627C27 /* MQCreateViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQCreateViewModel.m; sourceTree = "<group>"; };
+		10C48DC016CB227B00AE041C /* 91-beaker-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "91-beaker-2.png"; sourceTree = "<group>"; };
+		10C48DC216CB23A100AE041C /* 154-necktie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "154-necktie.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +132,8 @@
 		10A265E016C7A67900627C27 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1002A39E16C989AE001F910B /* 20-gear2.png */,
+				10C48DC216CB23A100AE041C /* 154-necktie.png */,
+				10C48DC016CB227B00AE041C /* 91-beaker-2.png */,
 				1002A39C16C9891B001F910B /* 112-group.png */,
 				10A265E116C7A67900627C27 /* MQ163FirstShot-Info.plist */,
 				10A265E216C7A67900627C27 /* InfoPlist.strings */,
@@ -206,7 +209,8 @@
 				10A2660216C7A67A00627C27 /* second.png in Resources */,
 				10A2660416C7A67A00627C27 /* second@2x.png in Resources */,
 				1002A39D16C9891B001F910B /* 112-group.png in Resources */,
-				1002A39F16C989AE001F910B /* 20-gear2.png in Resources */,
+				10C48DC116CB227B00AE041C /* 91-beaker-2.png in Resources */,
+				10C48DC316CB23A100AE041C /* 154-necktie.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
