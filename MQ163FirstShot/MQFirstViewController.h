@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class MQCreateViewModel;
-@interface MQFirstViewController : UITableViewController
+@interface MQFirstViewController : UITableViewController<UINavigationControllerDelegate>
 {
     IBOutlet UISegmentedControl *segmentedControl;
 }

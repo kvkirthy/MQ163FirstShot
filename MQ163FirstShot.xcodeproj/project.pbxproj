@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1002A39D16C9891B001F910B /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002A39C16C9891B001F910B /* 112-group.png */; };
+		10758ABE16CBDB9000A9F570 /* MQViewController1Step2.m in Sources */ = {isa = PBXBuildFile; fileRef = 10758ABD16CBDB9000A9F570 /* MQViewController1Step2.m */; };
 		10A265DA16C7A67900627C27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A265D916C7A67900627C27 /* UIKit.framework */; };
 		10A265DC16C7A67900627C27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A265DB16C7A67900627C27 /* Foundation.framework */; };
 		10A265DE16C7A67900627C27 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A265DD16C7A67900627C27 /* CoreGraphics.framework */; };
@@ -33,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		1002A39C16C9891B001F910B /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
+		10758ABC16CBDB9000A9F570 /* MQViewController1Step2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQViewController1Step2.h; sourceTree = "<group>"; };
+		10758ABD16CBDB9000A9F570 /* MQViewController1Step2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQViewController1Step2.m; sourceTree = "<group>"; };
 		10A265D616C7A67900627C27 /* MQ163FirstShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MQ163FirstShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A265D916C7A67900627C27 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		10A265DB16C7A67900627C27 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -111,6 +114,8 @@
 				10A265E816C7A67900627C27 /* MQAppDelegate.h */,
 				10A265E916C7A67900627C27 /* MQAppDelegate.m */,
 				10A265F116C7A67900627C27 /* MainStoryboard_iPhone.storyboard */,
+				10758ABC16CBDB9000A9F570 /* MQViewController1Step2.h */,
+				10758ABD16CBDB9000A9F570 /* MQViewController1Step2.m */,
 				10A265F416C7A67A00627C27 /* MainStoryboard_iPad.storyboard */,
 				10A265F716C7A67A00627C27 /* MQFirstViewController.h */,
 				10A265F816C7A67A00627C27 /* MQFirstViewController.m */,
@@ -227,6 +232,7 @@
 				10A2660016C7A67A00627C27 /* MQSecondViewController.m in Sources */,
 				10A2661016C7C4FA00627C27 /* MQPersonEntity.m in Sources */,
 				10A2661316C7C7DF00627C27 /* MQCreateViewModel.m in Sources */,
+				10758ABE16CBDB9000A9F570 /* MQViewController1Step2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

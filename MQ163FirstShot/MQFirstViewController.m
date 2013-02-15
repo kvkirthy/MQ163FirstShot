@@ -45,6 +45,7 @@
  - (IBAction) segmentedControlIndexChanged
 {
     [self.viewModel clearViewModel];
+    
     if(segmentedControl.selectedSegmentIndex ==0 )
     {
         [self populateLeads];
@@ -95,6 +96,14 @@
 {
     // Return NO if you do not want the specified item to be editable.
     return NO;
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqual: @"segueFirstVCToSecond"])
+    {
+        
+    }
 }
 
 
