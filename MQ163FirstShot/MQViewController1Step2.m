@@ -17,17 +17,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.imagePicker = [[UIImagePickerController alloc] init];
-        self.imagePicker.delegate = self;
-        
-        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-            self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-        }
-        
-        self.imagePicker.allowsEditing = YES;
-        //
-    }
+
     return self;
 }
 
@@ -35,6 +25,21 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    labelUserName.text = self.userName;
+    
+    if (self) {
+        imagePicker = [[UIImagePickerController alloc] init];
+        imagePicker.delegate = self;
+        
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+            imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        }
+        
+        imagePicker.allowsEditing = YES;
+        
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,8 +50,9 @@
 
 -(void) selectImageButtonClicked:(id)sender
 {
-    //[self.imagePicker presentViewController:self animated:YES completion:];
-    [self.imagePicker presentModalViewController:self animated:YES];
+    [self presentViewController:imagePicker animated:YES completion:^{
+        
+    }];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker

@@ -7,6 +7,7 @@
 //
 
 #import "MQFirstViewController.h"
+#import "MQViewController1Step2.h"
 #import "MQCreateViewModel.h"
 #import "MQPersonEntity.h"
 
@@ -102,7 +103,9 @@
 {
     if([segue.identifier isEqual: @"segueFirstVCToSecond"])
     {
-        
+        MQViewController1Step2 *nextVc = [segue destinationViewController];
+        MQPersonEntity *person = [self.viewModel getPersonEntityAtIndex:[self.tableView indexPathForSelectedRow].row];
+        nextVc.userName = person.fullName;
     }
 }
 

@@ -12,8 +12,9 @@
 {
     IBOutlet UIButton *selectImage;
     IBOutlet UIImageView *image;
+    IBOutlet UIImagePickerController *imagePicker;
+    IBOutlet UILabel *labelUserName;
 }
- @property UIImagePickerController *imagePicker;
-
+@property NSString *userName;
  - (IBAction)selectImageButtonClicked:(id)sender;
 @end
