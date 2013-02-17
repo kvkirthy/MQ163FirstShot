@@ -67,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="261" y="-702"/>
+            <point key="canvasLocation" x="397" y="-1152"/>
         </scene>
         <!--View Controller1 Step2-->
         <scene sceneID="QyR-IV-xTp">
@@ -105,7 +105,7 @@
                                     <constraint firstAttribute="width" constant="131" id="JnY-Ln-ZI1"/>
                                     <constraint firstAttribute="height" constant="21" id="cir-M3-pPP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -113,32 +113,32 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="171" id="o3g-le-ghf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Preview - review information on the post" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbG-aK-6s1">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SQL-3f-poU">
+                                <items>
+                                    <navigationItem title="Review Data" id="6zH-fE-tlx"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="8VF-zI-37P" firstAttribute="top" secondItem="sbJ-gR-aeo" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="9fo-ar-Z91"/>
-                            <constraint firstItem="sbJ-gR-aeo" firstAttribute="baseline" secondItem="r1T-d4-2hM" secondAttribute="baseline" type="default" id="C2D-8X-Sqb"/>
+                            <constraint firstItem="sbJ-gR-aeo" firstAttribute="top" secondItem="r1T-d4-2hM" secondAttribute="top" type="default" id="2fp-iY-Hoq"/>
+                            <constraint firstItem="r1T-d4-2hM" firstAttribute="top" secondItem="saa-9n-xt3" secondAttribute="top" constant="63" id="5SM-4p-EmT"/>
+                            <constraint firstItem="SQL-3f-poU" firstAttribute="top" secondItem="saa-9n-xt3" secondAttribute="top" type="default" id="7lI-kB-ynf"/>
+                            <constraint firstItem="SQL-3f-poU" firstAttribute="trailing" secondItem="saa-9n-xt3" secondAttribute="trailing" type="default" id="CFM-KY-OC2"/>
+                            <constraint firstItem="sbJ-gR-aeo" firstAttribute="leading" secondItem="saa-9n-xt3" secondAttribute="leading" constant="130" id="ITi-FB-6f2"/>
                             <constraint firstItem="r1T-d4-2hM" firstAttribute="leading" secondItem="saa-9n-xt3" secondAttribute="leading" constant="13" id="Ksn-m2-is9"/>
-                            <constraint firstItem="sbJ-gR-aeo" firstAttribute="top" secondItem="r1T-d4-2hM" secondAttribute="top" type="default" id="P7y-UG-PdC"/>
-                            <constraint firstItem="NbG-aK-6s1" firstAttribute="centerX" secondItem="saa-9n-xt3" secondAttribute="centerX" type="default" id="WHX-3j-YRN"/>
-                            <constraint firstItem="NbG-aK-6s1" firstAttribute="top" secondItem="saa-9n-xt3" secondAttribute="top" constant="14" id="cmQ-kV-9ZB"/>
-                            <constraint firstItem="jFe-Dy-3ty" firstAttribute="centerY" secondItem="saa-9n-xt3" secondAttribute="centerY" type="default" id="eFA-e7-0nl"/>
-                            <constraint firstItem="sbJ-gR-aeo" firstAttribute="top" secondItem="saa-9n-xt3" secondAttribute="top" constant="39" id="eiZ-O6-rqc"/>
                             <constraint firstItem="jFe-Dy-3ty" firstAttribute="leading" secondItem="saa-9n-xt3" secondAttribute="leading" constant="10" id="gW3-Xf-Sq8"/>
-                            <constraint firstItem="8VF-zI-37P" firstAttribute="trailing" secondItem="NbG-aK-6s1" secondAttribute="trailing" type="default" id="isG-N8-NN9"/>
-                            <constraint firstItem="sbJ-gR-aeo" firstAttribute="leading" secondItem="saa-9n-xt3" secondAttribute="leading" constant="105" id="mxP-I4-bsv"/>
+                            <constraint firstItem="sbJ-gR-aeo" firstAttribute="baseline" secondItem="r1T-d4-2hM" secondAttribute="baseline" type="default" id="oVv-8e-os6"/>
+                            <constraint firstItem="jFe-Dy-3ty" firstAttribute="top" secondItem="saa-9n-xt3" secondAttribute="top" constant="155" id="p3D-YO-3H7"/>
+                            <constraint firstAttribute="trailing" secondItem="8VF-zI-37P" secondAttribute="trailing" constant="8" id="qc6-GY-gkC"/>
+                            <constraint firstItem="8VF-zI-37P" firstAttribute="top" secondItem="saa-9n-xt3" secondAttribute="top" constant="120" id="rNX-9D-4si"/>
+                            <constraint firstItem="SQL-3f-poU" firstAttribute="leading" secondItem="saa-9n-xt3" secondAttribute="leading" type="default" id="wwh-Ey-lgo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="SNH-ey-WVR"/>
                     <connections>
                         <outlet property="image" destination="jFe-Dy-3ty" id="9x9-xh-udn"/>
                         <outlet property="labelUserName" destination="sbJ-gR-aeo" id="37u-rU-uEL"/>
@@ -147,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ziR-tI-2MG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="833" y="-702"/>
+            <point key="canvasLocation" x="969" y="-1152"/>
         </scene>
         <!--Second View Controller - Second-->
         <scene sceneID="13">
@@ -176,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="261" y="-51"/>
+            <point key="canvasLocation" x="397" y="-501"/>
         </scene>
         <!--Table View Controller - Engineer-->
         <scene sceneID="dua-Qb-Yju">
@@ -206,7 +206,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uUb-hm-QlA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="261" y="622"/>
+            <point key="canvasLocation" x="397" y="172"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -226,7 +226,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-380" y="-51"/>
+            <point key="canvasLocation" x="-244" y="-501"/>
         </scene>
     </scenes>
     <resources>
@@ -234,31 +234,6 @@
         <image name="154-necktie.png" width="8" height="27"/>
         <image name="91-beaker-2.png" width="20" height="24"/>
     </resources>
-    <classes>
-        <class className="MQFirstViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MQFirstViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="segmentedControlIndexChanged"/>
-                <relationship kind="outlet" name="segmentedControl" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-        <class className="MQSecondViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MQSecondViewController.h"/>
-        </class>
-        <class className="MQViewController1Step2" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MQViewController1Step2.h"/>
-            <relationships>
-                <relationship kind="action" name="selectImageButtonClicked:"/>
-                <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="imagePicker" candidateClass="UIImagePickerController"/>
-                <relationship kind="outlet" name="labelUserName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="selectImage" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

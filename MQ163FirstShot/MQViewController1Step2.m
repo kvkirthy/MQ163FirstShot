@@ -50,15 +50,16 @@
 
 -(void) selectImageButtonClicked:(id)sender
 {
-    [self presentViewController:imagePicker animated:YES completion:^{
-        
-    }];
+    [self presentViewController:imagePicker animated:YES completion:nil];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker
   didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+    UIImage *localImage = [info objectForKey:@"UIImagePickerControllerEditedImage"];
+    image.image = localImage;
     
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
