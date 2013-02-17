@@ -79,17 +79,17 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFe-Dy-3ty">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="299" id="Fr3-7h-zUy"/>
                                     <constraint firstAttribute="height" constant="343" id="eaH-iw-A4W"/>
+                                    <constraint firstAttribute="width" constant="318" id="uVM-bT-Pdf"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VF-zI-37P">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VF-zI-37P">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="6hA-IS-4xD"/>
-                                    <constraint firstAttribute="width" constant="116" id="QWv-oh-gp8"/>
+                                    <constraint firstAttribute="width" constant="27" id="GmQ-ee-qjE"/>
+                                    <constraint firstAttribute="height" constant="35" id="fbf-q9-EbX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                <state key="normal" title="Add Image">
+                                <state key="normal" image="168-upload-photo-2.png">
                                     <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -125,17 +125,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="sbJ-gR-aeo" firstAttribute="leading" secondItem="saa-9n-xt3" secondAttribute="leading" constant="124" id="1y3-iU-c3k"/>
                             <constraint firstItem="sbJ-gR-aeo" firstAttribute="top" secondItem="r1T-d4-2hM" secondAttribute="top" type="default" id="2fp-iY-Hoq"/>
-                            <constraint firstItem="r1T-d4-2hM" firstAttribute="top" secondItem="saa-9n-xt3" secondAttribute="top" constant="63" id="5SM-4p-EmT"/>
+                            <constraint firstItem="jFe-Dy-3ty" firstAttribute="top" secondItem="saa-9n-xt3" secondAttribute="top" constant="197" id="2hk-Tt-nJg"/>
                             <constraint firstItem="SQL-3f-poU" firstAttribute="top" secondItem="saa-9n-xt3" secondAttribute="top" type="default" id="7lI-kB-ynf"/>
                             <constraint firstItem="SQL-3f-poU" firstAttribute="trailing" secondItem="saa-9n-xt3" secondAttribute="trailing" type="default" id="CFM-KY-OC2"/>
-                            <constraint firstItem="sbJ-gR-aeo" firstAttribute="leading" secondItem="saa-9n-xt3" secondAttribute="leading" constant="130" id="ITi-FB-6f2"/>
-                            <constraint firstItem="r1T-d4-2hM" firstAttribute="leading" secondItem="saa-9n-xt3" secondAttribute="leading" constant="13" id="Ksn-m2-is9"/>
-                            <constraint firstItem="jFe-Dy-3ty" firstAttribute="leading" secondItem="saa-9n-xt3" secondAttribute="leading" constant="10" id="gW3-Xf-Sq8"/>
+                            <constraint firstItem="8VF-zI-37P" firstAttribute="top" secondItem="sbJ-gR-aeo" secondAttribute="top" type="default" id="FBE-1c-NKj"/>
+                            <constraint firstItem="8VF-zI-37P" firstAttribute="trailing" secondItem="jFe-Dy-3ty" secondAttribute="trailing" type="default" id="FNh-ZF-ryu"/>
+                            <constraint firstItem="jFe-Dy-3ty" firstAttribute="leading" secondItem="saa-9n-xt3" secondAttribute="leading" type="default" id="T90-wo-pjj"/>
+                            <constraint firstItem="r1T-d4-2hM" firstAttribute="top" secondItem="saa-9n-xt3" secondAttribute="top" constant="63" id="TFE-Ti-Ab5"/>
+                            <constraint firstItem="r1T-d4-2hM" firstAttribute="leading" secondItem="saa-9n-xt3" secondAttribute="leading" constant="6" id="da0-Zk-SL3"/>
                             <constraint firstItem="sbJ-gR-aeo" firstAttribute="baseline" secondItem="r1T-d4-2hM" secondAttribute="baseline" type="default" id="oVv-8e-os6"/>
-                            <constraint firstItem="jFe-Dy-3ty" firstAttribute="top" secondItem="saa-9n-xt3" secondAttribute="top" constant="155" id="p3D-YO-3H7"/>
-                            <constraint firstAttribute="trailing" secondItem="8VF-zI-37P" secondAttribute="trailing" constant="8" id="qc6-GY-gkC"/>
-                            <constraint firstItem="8VF-zI-37P" firstAttribute="top" secondItem="saa-9n-xt3" secondAttribute="top" constant="120" id="rNX-9D-4si"/>
                             <constraint firstItem="SQL-3f-poU" firstAttribute="leading" secondItem="saa-9n-xt3" secondAttribute="leading" type="default" id="wwh-Ey-lgo"/>
                         </constraints>
                     </view>
@@ -232,6 +232,7 @@
     <resources>
         <image name="112-group.png" width="32" height="21"/>
         <image name="154-necktie.png" width="8" height="27"/>
+        <image name="168-upload-photo-2.png" width="22" height="25"/>
         <image name="91-beaker-2.png" width="20" height="24"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
