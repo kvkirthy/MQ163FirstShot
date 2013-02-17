@@ -37,7 +37,6 @@
         }
         
         imagePicker.allowsEditing = YES;
-        
     }
     
 }

@@ -10,7 +10,7 @@
 
 @interface MQViewController1Step2 : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
-    IBOutlet UIButton *selectImage;
+    IBOutlet UIBarButtonItem *selectImage;
     IBOutlet UIImageView *image;
     IBOutlet UIImagePickerController *imagePicker;
     IBOutlet UILabel *labelUserName;
