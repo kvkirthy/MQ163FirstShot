@@ -9,7 +9,7 @@
             <objects>
                 <viewController title="First" id="2" customClass="MQFirstViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="z5K-ck-KJV">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" barStyle="blackOpaque" id="wf9-kc-X0e">
@@ -105,7 +105,7 @@
                                     <navigationItem title="Review Data" id="6zH-fE-tlx">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="K2R-VA-54X">
                                             <connections>
-                                                <segue destination="2" kind="modal" id="Nnq-QF-icA"/>
+                                                <segue destination="4" kind="modal" id="adO-Q2-kje"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="wFr-hc-Azj">
@@ -256,7 +256,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="Nnq-QF-icA"/>
-    </inferredMetricsTieBreakers>
 </document>
