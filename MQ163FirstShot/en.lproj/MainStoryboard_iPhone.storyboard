@@ -182,7 +182,7 @@
             </objects>
             <point key="canvasLocation" x="999" y="-501"/>
         </scene>
-        <!--View Controller - Post a merchandize deal-->
+        <!--View Controller - Post-->
         <scene sceneID="ZFu-lQ-v0y">
             <objects>
                 <viewController id="aqQ-7V-sIA" sceneMemberID="viewController">
@@ -191,7 +191,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Post a merchandize deal" id="8sS-7i-Iu9"/>
+                    <navigationItem key="navigationItem" title="Post" id="8sS-7i-Iu9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etm-MQ-tba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
