@@ -32,6 +32,7 @@
 		10C48DC316CB23A100AE041C /* 154-necktie.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C48DC216CB23A100AE041C /* 154-necktie.png */; };
 		10E8AB0716D0FEBE00C4EC0A /* 168-upload-photo-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E8AB0616D0FEBE00C4EC0A /* 168-upload-photo-2.png */; };
 		10E8AB1116D37E9D00C4EC0A /* MQMerchandize.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E8AB1016D37E9D00C4EC0A /* MQMerchandize.m */; };
+		10E8AB1516D3AEB700C4EC0A /* Albert_Einstein_64x64.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E8AB1416D3AEB700C4EC0A /* Albert_Einstein_64x64.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		10E8AB0616D0FEBE00C4EC0A /* 168-upload-photo-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "168-upload-photo-2.png"; sourceTree = "<group>"; };
 		10E8AB0F16D37E9D00C4EC0A /* MQMerchandize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQMerchandize.h; sourceTree = "<group>"; };
 		10E8AB1016D37E9D00C4EC0A /* MQMerchandize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQMerchandize.m; sourceTree = "<group>"; };
+		10E8AB1416D3AEB700C4EC0A /* Albert_Einstein_64x64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Albert_Einstein_64x64.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		10A265CD16C7A67900627C27 = {
 			isa = PBXGroup;
 			children = (
+				10E8AB1416D3AEB700C4EC0A /* Albert_Einstein_64x64.png */,
 				10A265DF16C7A67900627C27 /* MQ163FirstShot */,
 				10A265D816C7A67900627C27 /* Frameworks */,
 				10A265D716C7A67900627C27 /* Products */,
@@ -233,6 +236,7 @@
 				10C48DC116CB227B00AE041C /* 91-beaker-2.png in Resources */,
 				10C48DC316CB23A100AE041C /* 154-necktie.png in Resources */,
 				10E8AB0716D0FEBE00C4EC0A /* 168-upload-photo-2.png in Resources */,
+				10E8AB1516D3AEB700C4EC0A /* Albert_Einstein_64x64.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
