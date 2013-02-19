@@ -170,6 +170,9 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="aqQ-7V-sIA" kind="push" id="e0m-2a-lKe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
@@ -178,6 +181,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="999" y="-501"/>
+        </scene>
+        <!--View Controller - Post a merchandize deal-->
+        <scene sceneID="ZFu-lQ-v0y">
+            <objects>
+                <viewController id="aqQ-7V-sIA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qAn-vU-U0a">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Post a merchandize deal" id="8sS-7i-Iu9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="etm-MQ-tba" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1502" y="-505"/>
         </scene>
         <!--Table View Controller - Engineer-->
         <scene sceneID="dua-Qb-Yju">
