@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MQSecondViewController : UIViewController
+@interface MQSecondViewController : UITableViewController
+
+@property (nonatomic, copy) NSMutableArray *viewModel;
 
 @end
