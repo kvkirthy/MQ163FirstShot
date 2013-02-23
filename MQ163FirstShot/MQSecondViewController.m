@@ -8,6 +8,7 @@
 
 #import "MQSecondViewController.h"
 #import "MQMerchandize.h"
+#import "MQMerchandizeDataAccess.h"
 
 @interface MQSecondViewController ()
 
@@ -19,16 +20,10 @@
 {
     [super viewDidLoad];
     self.viewModel = [[NSMutableArray alloc] init];
+    self.dataAccess = [[MQMerchandizeDataAccess alloc] initWithObject:self];
+    [self.dataAccess getMerchandizeDataOnNetwork];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    MQMerchandize *obj1 = [[MQMerchandize alloc]initWithTitle:@"Honda Accord on Sale" Details:@"2012 model for monthly less than $120"];
-    
-    [self.viewModel addObject: obj1];
-   
-    
-    [self.viewModel addObject:[[MQMerchandize alloc]initWithTitle:@"Land Rover 2013 showcase" Details:@"Test ride available"]];
-    
-    [self.viewModel addObject:[[MQMerchandize alloc]initWithTitle:@"Ferrari and Dealership partnership" Details:@"500 t-shirts to be taken away"]];
     
 }
 
@@ -52,8 +47,6 @@
 }
 
 
-
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"merchandizeTblVwid"];
@@ -70,6 +63,12 @@
 {
     // Return NO if you do not want the specified item to be editable.
     return NO;
+}
+
+-(void) returnDataObject:(NSMutableArray *)returnData
+{
+    self.viewModel = returnData;
+    [self.tableView reloadData];
 }
 
 @end

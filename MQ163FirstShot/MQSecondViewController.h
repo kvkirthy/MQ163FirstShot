@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MQDataAccessProtocol.h"
 
-@interface MQSecondViewController : UITableViewController
+@class MQMerchandizeDataAccess;
+
+@interface MQSecondViewController : UITableViewController<MQDataAccessProtocol>
 
 @property (nonatomic, copy) NSMutableArray *viewModel;
+@property (strong, nonatomic) MQMerchandizeDataAccess *dataAccess;
+
+-(void)returnDataObject:(NSMutableArray *)returnData;
+
 
 @end

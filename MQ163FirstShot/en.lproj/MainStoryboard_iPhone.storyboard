@@ -24,7 +24,6 @@
                                         <segments>
                                             <segment title="Leads"/>
                                             <segment title="Customers"/>
-                                            <segment title="All"/>
                                         </segments>
                                         <connections>
                                             <action selector="segmentedControlIndexChanged" destination="2" eventType="valueChanged" id="0zv-Yl-WZ4"/>

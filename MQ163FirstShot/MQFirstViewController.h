@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "MQDataAccessProtocol.h"
 
-@class MQDataAccess;
+@class MQProspectDataAccess;
 
 @interface MQFirstViewController : UITableViewController<UINavigationControllerDelegate, MQDataAccessProtocol>
 {
     IBOutlet UISegmentedControl *segmentedControl;
 }
 @property(nonatomic, copy) NSMutableArray  *model;
-@property (strong, nonatomic) MQDataAccess  *dataAccess;
+@property (strong, nonatomic) MQProspectDataAccess  *dataAccess;
 
 -(IBAction) segmentedControlIndexChanged;
 -(void)returnDataObject:(NSMutableArray *)returnData;

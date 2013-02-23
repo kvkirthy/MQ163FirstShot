@@ -9,7 +9,7 @@
 #import "MQFirstViewController.h"
 #import "MQViewController1Step2.h"
 #import "MQPersonEntity.h"
-#import "MQDataAccess.h"
+#import "MQProspectDataAccess.h"
 
 @interface MQFirstViewController ()
 
@@ -40,13 +40,6 @@
     {
         [self.dataAccess getLeadsDataOnNetwork];
     }
-    else if (segmentedControl.selectedSegmentIndex ==2 )
-    {
-        /*
-        [self.dataAccess getCustomerDataOnNetwork];
-        [self.dataAccess getLeadsDataOnNetwork];
-         */
-    }
     
 }
 
@@ -61,7 +54,7 @@
     [super awakeFromNib];
     self.model = [[NSMutableArray alloc]init];
     
-    self.dataAccess = [[MQDataAccess alloc] initWithObject:self];
+    self.dataAccess = [[MQProspectDataAccess alloc] initWithObject:self];
     [self.dataAccess getCustomerDataOnNetwork];
 
 }
@@ -82,9 +75,14 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"personTemplate"];
     MQPersonEntity *objAtIndex = [self.model objectAtIndex:indexPath.row];
+   
+    NSMutableString *details = [[NSMutableString alloc] initWithString:objAtIndex.car];
+    [details appendString:@" - "];
+    [details appendString:objAtIndex.features];
+    
     
     [[cell textLabel] setText: objAtIndex.fullName];
-    [[cell detailTextLabel] setText:objAtIndex.car];
+    [[cell detailTextLabel] setText:details];
     
     return cell;
 }
