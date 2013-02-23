@@ -10,18 +10,13 @@
 
 @implementation MQPersonEntity
 
--(id) initWithName:(NSString *)theName email:(NSString *)theEmail
+-(id) initWithName:(NSString *)theName email:(NSString *)theEmail  car: (NSString *)theCar features: (NSString *) theFeatures
 {
-    if(theName)
-    {
-        self.fullName = theName;
-    }
-    
-    if(theEmail)
-    {
-        self.email = theEmail;
-    }
-    
+    self.fullName = theName;
+    self.email = theEmail;
+    self.car = theCar;
+    self.features = theFeatures;
+
     return self;
 }
 

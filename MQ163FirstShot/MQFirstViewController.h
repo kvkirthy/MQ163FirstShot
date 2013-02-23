@@ -7,15 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MQDataAccessProtocol.h"
 
-@class MQCreateViewModel;
-@interface MQFirstViewController : UITableViewController<UINavigationControllerDelegate>
+@class MQDataAccess;
+
+@interface MQFirstViewController : UITableViewController<UINavigationControllerDelegate, MQDataAccessProtocol>
 {
     IBOutlet UISegmentedControl *segmentedControl;
 }
-
-@property (strong, nonatomic) MQCreateViewModel *viewModel;
+@property(nonatomic, copy) NSMutableArray  *model;
+@property (strong, nonatomic) MQDataAccess  *dataAccess;
 
 -(IBAction) segmentedControlIndexChanged;
+-(void)returnDataObject:(NSMutableArray *)returnData;
 
 @end

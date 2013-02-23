@@ -8,34 +8,18 @@
 
 #import "MQFirstViewController.h"
 #import "MQViewController1Step2.h"
-#import "MQCreateViewModel.h"
 #import "MQPersonEntity.h"
+#import "MQDataAccess.h"
 
 @interface MQFirstViewController ()
-- (void) populateLeads;
--(void) populateCustomers;
+
+//- (void) populateLeads;
+//-(void) populateCustomers;
+//- (void) getDataOnNetwork;
+
 @end
 
 @implementation MQFirstViewController
-
--(void) populateLeads
-{
-    [self.viewModel addPersonToProfile:[[MQPersonEntity alloc] initWithName:@"Sachin Tendulkar" email:@"sachin@tendulkar.com"]];
-    
-    [self.viewModel addPersonToProfile:[[MQPersonEntity alloc] initWithName:@"Rahul Dravid" email:@"rahul@dravid.com"]];
-    
-    [self.viewModel addPersonToProfile:[[MQPersonEntity alloc] initWithName:@"Sourav Ganguly" email:@"sourav@ganguly.com"]];
-    
-    [self.viewModel addPersonToProfile:[[MQPersonEntity alloc] initWithName:@"Mahi Dhoni" email:@"mahi@dhoni.com"]];
-}
-
--(void) populateCustomers
-{
-    [self.viewModel addPersonToProfile:[[MQPersonEntity alloc] initWithName:@"Tom Hanks" email:@"Tom@Hanks.com"]];
-    [self.viewModel addPersonToProfile:[[MQPersonEntity alloc] initWithName:@"Liam Neeson" email:@"Liam@Neeson.com"]];
-    [self.viewModel addPersonToProfile:[[MQPersonEntity alloc] initWithName:@"Jack Hugman" email:@"Jack@Hugman.com"]];
-    [self.viewModel addPersonToProfile:[[MQPersonEntity alloc] initWithName:@"Robert Dowling Jr" email:@"Robert@Dowling.com"]];
-}
 
 - (void)viewDidLoad
 {
@@ -45,23 +29,25 @@
 
  - (IBAction) segmentedControlIndexChanged
 {
-    [self.viewModel clearViewModel];
+    
+    [self.model removeAllObjects];
     
     if(segmentedControl.selectedSegmentIndex ==0 )
     {
-        [self populateLeads];
+        [self.dataAccess getCustomerDataOnNetwork];
     }
     else if (segmentedControl.selectedSegmentIndex ==1 )
     {
-        [self populateCustomers];
+        [self.dataAccess getLeadsDataOnNetwork];
     }
     else if (segmentedControl.selectedSegmentIndex ==2 )
     {
-        [self populateLeads];
-        [self populateCustomers];
+        /*
+        [self.dataAccess getCustomerDataOnNetwork];
+        [self.dataAccess getLeadsDataOnNetwork];
+         */
     }
-    [self.tableView reloadData];
-
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,22 +59,32 @@
 - (void) awakeFromNib
 {
     [super awakeFromNib];
+    self.model = [[NSMutableArray alloc]init];
     
-    self.viewModel = [[MQCreateViewModel alloc] init];
-    [self populateLeads];
+    self.dataAccess = [[MQDataAccess alloc] initWithObject:self];
+    [self.dataAccess getCustomerDataOnNetwork];
+
+}
+
+-(void) setModel:(NSMutableArray *)theModel
+{
+    if(_model != theModel)
+    {
+        _model = [theModel mutableCopy];
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.viewModel getCountOfPersons];
+    return [self.model count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"personTemplate"];
-    MQPersonEntity *objAtIndex = [self.viewModel getPersonEntityAtIndex:indexPath.row];
+    MQPersonEntity *objAtIndex = [self.model objectAtIndex:indexPath.row];
     
     [[cell textLabel] setText: objAtIndex.fullName];
-    [[cell detailTextLabel] setText:objAtIndex.email];
+    [[cell detailTextLabel] setText:objAtIndex.car];
     
     return cell;
 }
@@ -104,10 +100,16 @@
     if([segue.identifier isEqual: @"segueFirstVCToSecond"])
     {
         MQViewController1Step2 *nextVc = [segue destinationViewController];
-        MQPersonEntity *person = [self.viewModel getPersonEntityAtIndex:[self.tableView indexPathForSelectedRow].row];
+
+        MQPersonEntity *person = [self.model objectAtIndex:[self.tableView indexPathForSelectedRow].row];
         nextVc.userName = person.fullName;
     }
 }
 
+-(void)returnDataObject:(NSMutableArray *)returnData
+{
+    self.model= returnData;
+    [self.tableView reloadData];
+}
 
 @end

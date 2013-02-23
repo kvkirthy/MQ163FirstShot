@@ -12,9 +12,11 @@
 
 @property NSString *fullName;
 @property NSString *email;
+@property NSString *car;
+@property NSString *features;
 
 @property Boolean isCustomer;
 
--(id) initWithName: (NSString *) theName email: (NSString *) theEmail;
+-(id) initWithName: (NSString *) theName email: (NSString *) theEmail car: (NSString *)theCar features:(NSString *) theFeatures;
 
 @end
