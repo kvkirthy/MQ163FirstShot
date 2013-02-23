@@ -29,7 +29,8 @@
 		10A2661016C7C4FA00627C27 /* MQPersonEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A2660F16C7C4FA00627C27 /* MQPersonEntity.m */; };
 		10C48DC116CB227B00AE041C /* 91-beaker-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C48DC016CB227B00AE041C /* 91-beaker-2.png */; };
 		10C48DC316CB23A100AE041C /* 154-necktie.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C48DC216CB23A100AE041C /* 154-necktie.png */; };
-		10E6D1F416D92E48005CFA4D /* MQDataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E6D1F316D92E47005CFA4D /* MQDataAccess.m */; };
+		10E6D1F416D92E48005CFA4D /* MQProspectDataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E6D1F316D92E47005CFA4D /* MQProspectDataAccess.m */; };
+		10E6D1F916D9582A005CFA4D /* MQMerchandizeDataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E6D1F816D9582A005CFA4D /* MQMerchandizeDataAccess.m */; };
 		10E8AB0716D0FEBE00C4EC0A /* 168-upload-photo-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E8AB0616D0FEBE00C4EC0A /* 168-upload-photo-2.png */; };
 		10E8AB1116D37E9D00C4EC0A /* MQMerchandize.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E8AB1016D37E9D00C4EC0A /* MQMerchandize.m */; };
 		10E8AB1516D3AEB700C4EC0A /* Albert_Einstein_64x64.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E8AB1416D3AEB700C4EC0A /* Albert_Einstein_64x64.png */; };
@@ -66,9 +67,11 @@
 		10A2660F16C7C4FA00627C27 /* MQPersonEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQPersonEntity.m; sourceTree = "<group>"; };
 		10C48DC016CB227B00AE041C /* 91-beaker-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "91-beaker-2.png"; sourceTree = "<group>"; };
 		10C48DC216CB23A100AE041C /* 154-necktie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "154-necktie.png"; sourceTree = "<group>"; };
-		10E6D1F216D92E47005CFA4D /* MQDataAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQDataAccess.h; sourceTree = "<group>"; };
-		10E6D1F316D92E47005CFA4D /* MQDataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQDataAccess.m; sourceTree = "<group>"; };
+		10E6D1F216D92E47005CFA4D /* MQProspectDataAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQProspectDataAccess.h; sourceTree = "<group>"; };
+		10E6D1F316D92E47005CFA4D /* MQProspectDataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQProspectDataAccess.m; sourceTree = "<group>"; };
 		10E6D1F516D93EBE005CFA4D /* MQDataAccessProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQDataAccessProtocol.h; sourceTree = "<group>"; };
+		10E6D1F716D9582A005CFA4D /* MQMerchandizeDataAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQMerchandizeDataAccess.h; sourceTree = "<group>"; };
+		10E6D1F816D9582A005CFA4D /* MQMerchandizeDataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQMerchandizeDataAccess.m; sourceTree = "<group>"; };
 		10E8AB0616D0FEBE00C4EC0A /* 168-upload-photo-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "168-upload-photo-2.png"; sourceTree = "<group>"; };
 		10E8AB0F16D37E9D00C4EC0A /* MQMerchandize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQMerchandize.h; sourceTree = "<group>"; };
 		10E8AB1016D37E9D00C4EC0A /* MQMerchandize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQMerchandize.m; sourceTree = "<group>"; };
@@ -120,6 +123,7 @@
 		10A265DF16C7A67900627C27 /* MQ163FirstShot */ = {
 			isa = PBXGroup;
 			children = (
+				10E6D1F616D95609005CFA4D /* DataAccess */,
 				10A265E816C7A67900627C27 /* MQAppDelegate.h */,
 				10A265E916C7A67900627C27 /* MQAppDelegate.m */,
 				10A265F116C7A67900627C27 /* MainStoryboard_iPhone.storyboard */,
@@ -136,9 +140,6 @@
 				10A2660316C7A67A00627C27 /* second@2x.png */,
 				10A265E016C7A67900627C27 /* Supporting Files */,
 				10E8AB0E16D37DB900C4EC0A /* Entities */,
-				10E6D1F216D92E47005CFA4D /* MQDataAccess.h */,
-				10E6D1F316D92E47005CFA4D /* MQDataAccess.m */,
-				10E6D1F516D93EBE005CFA4D /* MQDataAccessProtocol.h */,
 			);
 			path = MQ163FirstShot;
 			sourceTree = "<group>";
@@ -159,6 +160,18 @@
 				10A265EF16C7A67900627C27 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		10E6D1F616D95609005CFA4D /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				10E6D1F216D92E47005CFA4D /* MQProspectDataAccess.h */,
+				10E6D1F316D92E47005CFA4D /* MQProspectDataAccess.m */,
+				10E6D1F516D93EBE005CFA4D /* MQDataAccessProtocol.h */,
+				10E6D1F716D9582A005CFA4D /* MQMerchandizeDataAccess.h */,
+				10E6D1F816D9582A005CFA4D /* MQMerchandizeDataAccess.m */,
+			);
+			name = DataAccess;
 			sourceTree = "<group>";
 		};
 		10E8AB0E16D37DB900C4EC0A /* Entities */ = {
@@ -256,7 +269,8 @@
 				10A2661016C7C4FA00627C27 /* MQPersonEntity.m in Sources */,
 				10758ABE16CBDB9000A9F570 /* MQViewController1Step2.m in Sources */,
 				10E8AB1116D37E9D00C4EC0A /* MQMerchandize.m in Sources */,
-				10E6D1F416D92E48005CFA4D /* MQDataAccess.m in Sources */,
+				10E6D1F416D92E48005CFA4D /* MQProspectDataAccess.m in Sources */,
+				10E6D1F916D9582A005CFA4D /* MQMerchandizeDataAccess.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
