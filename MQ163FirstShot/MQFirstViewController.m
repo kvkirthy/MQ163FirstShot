@@ -100,7 +100,7 @@
         MQViewController1Step2 *nextVc = [segue destinationViewController];
 
         MQPersonEntity *person = [self.model objectAtIndex:[self.tableView indexPathForSelectedRow].row];
-        nextVc.userName = person.fullName;
+        nextVc.user = person;
     }
 }
 

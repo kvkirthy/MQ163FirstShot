@@ -8,13 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@class MQPersonEntity;
+
 @interface MQViewController1Step2 : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     IBOutlet UIBarButtonItem *selectImage;
     IBOutlet UIImageView *image;
     IBOutlet UIImagePickerController *imagePicker;
-    IBOutlet UILabel *labelUserName;
+    IBOutlet UILabel *labelUserName, *labelCar, *labelFeatures, *tagText;
+    IBOutlet UIButton *buttonUpload;
+    IBOutlet UISlider *contentSlider;
+    
 }
-@property NSString *userName;
+@property MQPersonEntity *user;
  - (IBAction)selectImageButtonClicked:(id)sender;
+ - (IBAction)uploadButtonClicked :(id)sender;
+ - (IBAction)sliderMoved:(id)sender;
 @end

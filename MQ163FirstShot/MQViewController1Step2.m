@@ -7,6 +7,7 @@
 //
 
 #import "MQViewController1Step2.h"
+#import "MQPersonEntity.h"
 
 @interface MQViewController1Step2 ()
 
@@ -26,7 +27,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    labelUserName.text = self.userName;
+    labelUserName.text = self.user.fullName;
+    labelCar.text= [NSString stringWithFormat:@"on your new %@",self.user.car];
+    labelFeatures.text = self.user.features;
+    tagText.text = [NSString stringWithFormat:@"Tag %@ on Facebook.",self.user.email];
     
     if (self) {
         imagePicker = [[UIImagePickerController alloc] init];
@@ -35,10 +39,41 @@
         if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
             imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
         }
-        
         imagePicker.allowsEditing = YES;
     }
-    
+}
+
+-(IBAction)uploadButtonClicked :(id)sender{
+    NSLog(@"clicked");
+}
+
+-(IBAction)sliderMoved:(id)sender{
+    float sliderValue = [contentSlider value];
+    if(sliderValue <= 0)
+    {
+        labelCar.text= @"";
+        labelFeatures.text = @"";
+        tagText.text = @"";
+    }
+    if(sliderValue > 0 && sliderValue <= 1.5)
+    {
+        labelCar.text= [NSString stringWithFormat:@"on your new %@",self.user.car];
+        labelFeatures.text = @"";
+        tagText.text = @"";
+
+    }
+    else if(sliderValue > 1.5 && sliderValue <= 2.5)
+    {
+        labelCar.text= [NSString stringWithFormat:@"on your new %@",self.user.car];
+        labelFeatures.text = self.user.features;
+        tagText.text = @"";
+    }
+    else if(sliderValue > 2.5)
+    {
+        labelCar.text= [NSString stringWithFormat:@"on your new %@",self.user.car];
+        labelFeatures.text = self.user.features;
+        tagText.text = [NSString stringWithFormat:@"Tag %@ on Facebook.",self.user.email];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,6 +92,8 @@
 {
     UIImage *localImage = [info objectForKey:@"UIImagePickerControllerEditedImage"];
     image.image = localImage;
+    
+    //[contentSlider
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
