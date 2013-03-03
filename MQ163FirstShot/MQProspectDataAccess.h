@@ -18,5 +18,6 @@
 -(id) initWithObject: (id<MQDataAccessProtocol>) obj;
 -(void) getCustomerDataOnNetwork;
 -(void) getLeadsDataOnNetwork;
+-(NSString *) postProspectData: (NSData *) imageData and: (NSString *) postData;
 
 @end

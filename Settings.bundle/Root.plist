@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Base Url</string>
+			<key>Key</key>
+			<string>baseApiUrl</string>
+			<key>DefaultValue</key>
+			<string>http://192.168.2.20/api</string>
+			<key>KeyboardType</key>
+			<string>URL</string>
+			<key>IsSecure</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Merchandize API URL</string>
+			<key>DefaultValue</key>
+			<string>merchandize</string>
+			<key>IsSecure</key>
+			<false/>
+			<key>KeyboardType</key>
+			<string>Alphabet</string>
+			<key>Key</key>
+			<string>merchandize</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Customer API URL</string>
+			<key>Key</key>
+			<string>customerApiUrl</string>
+			<key>DefaultValue</key>
+			<string>prospects?isCustomer=true</string>
+			<key>IsSecure</key>
+			<false/>
+			<key>KeyboardType</key>
+			<string>Alphabet</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Leads API URL</string>
+			<key>Key</key>
+			<string>leadsApiUrl</string>
+			<key>DefaultValue</key>
+			<string>prospects?isCustomer=false</string>
+			<key>KeyboardType</key>
+			<string>Alphabet</string>
+			<key>IsSecure</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Post Data URL</string>
+			<key>Key</key>
+			<string>socialIntegrator</string>
+			<key>DefaultValue</key>
+			<string>SocialIntegrator</string>
+			<key>IsSecure</key>
+			<false/>
+		</dict>
+	</array>
+</dict>
+</plist>

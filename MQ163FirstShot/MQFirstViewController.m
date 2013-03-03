@@ -21,10 +21,31 @@
 
 @implementation MQFirstViewController
 
+- (void)registerDefaultsFromSettingsBundle {
+    NSString *settingsBundle = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"bundle"];
+    if(!settingsBundle) {
+        NSLog(@"Could not find Settings.bundle");
+        return;
+    }
+    
+    NSDictionary *settings = [NSDictionary dictionaryWithContentsOfFile:[settingsBundle stringByAppendingPathComponent:@"Root.plist"]];
+    NSArray *preferences = [settings objectForKey:@"PreferenceSpecifiers"];
+    
+    NSMutableDictionary *defaultsToRegister = [[NSMutableDictionary alloc] initWithCapacity:[preferences count]];
+    for(NSDictionary *prefSpecification in preferences) {
+        NSString *key = [prefSpecification objectForKey:@"Key"];
+        if(key) {
+            [defaultsToRegister setObject:[prefSpecification objectForKey:@"DefaultValue"] forKey:key];
+        }
+    }
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultsToRegister];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	// Do any additional setup after loading the view, typically from a nib
+
 }
 
  - (IBAction) segmentedControlIndexChanged
@@ -34,11 +55,11 @@
     
     if(segmentedControl.selectedSegmentIndex ==0 )
     {
-        [self.dataAccess getCustomerDataOnNetwork];
+        [self.dataAccess getLeadsDataOnNetwork];
     }
     else if (segmentedControl.selectedSegmentIndex ==1 )
     {
-        [self.dataAccess getLeadsDataOnNetwork];
+        [self.dataAccess getCustomerDataOnNetwork];
     }
     
 }
@@ -54,8 +75,10 @@
     [super awakeFromNib];
     self.model = [[NSMutableArray alloc]init];
     
+    [self registerDefaultsFromSettingsBundle];
+    
     self.dataAccess = [[MQProspectDataAccess alloc] initWithObject:self];
-    [self.dataAccess getCustomerDataOnNetwork];
+    [self.dataAccess getLeadsDataOnNetwork];
 
 }
 

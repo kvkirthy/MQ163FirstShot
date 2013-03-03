@@ -8,6 +8,7 @@
 
 #import "MQViewController1Step2.h"
 #import "MQPersonEntity.h"
+#import "MQProspectDataAccess.h"
 
 @interface MQViewController1Step2 ()
 
@@ -27,6 +28,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    self.dataAccess = [[MQProspectDataAccess alloc] init];
+    
     labelUserName.text = self.user.fullName;
     labelCar.text= [NSString stringWithFormat:@"on your new %@",self.user.car];
     labelFeatures.text = self.user.features;
@@ -45,36 +48,10 @@
 
 -(IBAction)uploadButtonClicked :(id)sender{
     //NSLog(@"clicked");
-    NSData *imageData = UIImagePNGRepresentation(image.image);
     
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]init];
-    [request setURL:[NSURL URLWithString:@"http://192.168.2.11/api/SocialIntegrator"]];
-    [request setHTTPMethod:@"POST"];
+    NSString *postData = [NSString stringWithFormat:@"%@ %@. %@ %@", labelUserName.text, labelCar.text, labelFeatures.text, tagText.text];
     
-    NSString *boundary = @"-----------------------------7dd38a1060692";
-	NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@",boundary];
-    [request addValue:contentType forHTTPHeaderField: @"Content-Type"];
-    [request addValue:@"text/html, application/xhtml+xml, */*" forHTTPHeaderField:@"Accept"];
-    [request addValue:@"no-cache" forHTTPHeaderField:@"Pragma"];
-        
-    NSMutableData *body = [NSMutableData data];
-    [body appendData:[[NSString stringWithFormat:@"\r\n--%@",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-	[body appendData:[@"\r\nContent-Disposition: form-data; name=\"caption\"" dataUsingEncoding:NSUTF8StringEncoding]];
-    [body appendData:[@"\r\n\r\nSample" dataUsingEncoding:NSUTF8StringEncoding]];
-	[body appendData:[[NSString stringWithFormat:@"\r\n--%@",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-	[body appendData:[@"\r\nContent-Disposition: form-data; name=\"image1\"; filename=\"ipodfile.png\""dataUsingEncoding:NSUTF8StringEncoding]];
-	[body appendData:[@"\r\nContent-Type: application/octet-stream\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
-	[body appendData:[NSData dataWithData:imageData]];
-	[body appendData:[@"\r\n-------------------------------7dd38a1060692--\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
-	
-	[request setHTTPBody:body];
-    
-   // [request setHTTPBodyStream:body];
-    
-    NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-	NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
-	
-	NSLog(returnString);
+    NSLog(@"%@",[self.dataAccess postProspectData: UIImagePNGRepresentation(image.image) and: postData]);
 }
 
 -(IBAction)sliderMoved:(id)sender{

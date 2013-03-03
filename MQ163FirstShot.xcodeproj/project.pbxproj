@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1002A39D16C9891B001F910B /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002A39C16C9891B001F910B /* 112-group.png */; };
 		10758ABE16CBDB9000A9F570 /* MQViewController1Step2.m in Sources */ = {isa = PBXBuildFile; fileRef = 10758ABD16CBDB9000A9F570 /* MQViewController1Step2.m */; };
+		107970B816E1260300654E7F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 107970B716E1260300654E7F /* Settings.bundle */; };
 		10A265DA16C7A67900627C27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A265D916C7A67900627C27 /* UIKit.framework */; };
 		10A265DC16C7A67900627C27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A265DB16C7A67900627C27 /* Foundation.framework */; };
 		10A265DE16C7A67900627C27 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A265DD16C7A67900627C27 /* CoreGraphics.framework */; };
@@ -40,6 +41,7 @@
 		1002A39C16C9891B001F910B /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
 		10758ABC16CBDB9000A9F570 /* MQViewController1Step2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQViewController1Step2.h; sourceTree = "<group>"; };
 		10758ABD16CBDB9000A9F570 /* MQViewController1Step2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQViewController1Step2.m; sourceTree = "<group>"; };
+		107970B716E1260300654E7F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		10A265D616C7A67900627C27 /* MQ163FirstShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MQ163FirstShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A265D916C7A67900627C27 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		10A265DB16C7A67900627C27 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -95,6 +97,7 @@
 		10A265CD16C7A67900627C27 = {
 			isa = PBXGroup;
 			children = (
+				107970B716E1260300654E7F /* Settings.bundle */,
 				10E8AB1416D3AEB700C4EC0A /* Albert_Einstein_64x64.png */,
 				10A265DF16C7A67900627C27 /* MQ163FirstShot */,
 				10A265D816C7A67900627C27 /* Frameworks */,
@@ -252,6 +255,7 @@
 				10C48DC316CB23A100AE041C /* 154-necktie.png in Resources */,
 				10E8AB0716D0FEBE00C4EC0A /* 168-upload-photo-2.png in Resources */,
 				10E8AB1516D3AEB700C4EC0A /* Albert_Einstein_64x64.png in Resources */,
+				107970B816E1260300654E7F /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

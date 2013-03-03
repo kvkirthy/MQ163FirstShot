@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class MQPersonEntity;
+@class MQPersonEntity, MQProspectDataAccess;
 
 @interface MQViewController1Step2 : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
@@ -21,6 +21,7 @@
     
 }
 @property MQPersonEntity *user;
+@property MQProspectDataAccess *dataAccess;
  - (IBAction)selectImageButtonClicked:(id)sender;
  - (IBAction)uploadButtonClicked :(id)sender;
  - (IBAction)sliderMoved:(id)sender;
