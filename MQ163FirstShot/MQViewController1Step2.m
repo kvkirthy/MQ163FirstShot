@@ -9,6 +9,7 @@
 #import "MQViewController1Step2.h"
 #import "MQPersonEntity.h"
 #import "MQProspectDataAccess.h"
+#import "MQSocialIntegratorAccess.h"
 
 @interface MQViewController1Step2 ()
 
@@ -28,14 +29,16 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.dataAccess = [[MQProspectDataAccess alloc] init];
-    
-    labelUserName.text = self.user.fullName;
-    labelCar.text= [NSString stringWithFormat:@"on your new %@",self.user.car];
-    labelFeatures.text = self.user.features;
-    tagText.text = [NSString stringWithFormat:@"Tag %@ on Facebook.",self.user.email];
-    
     if (self) {
+        
+        labelUserName.text = self.user.fullName;
+        labelCar.text= [NSString stringWithFormat:@"on your new %@",self.user.car];
+        labelFeatures.text = self.user.features;
+        tagText.text = [NSString stringWithFormat:@"Tag %@ on Facebook.",self.user.email];
+        
+        self.dataAccess = [[MQProspectDataAccess alloc] init];
+        self.socialIntegratorDataAccess = [[MQSocialIntegratorAccess alloc] init];
+        
         imagePicker = [[UIImagePickerController alloc] init];
         imagePicker.delegate = self;
         
@@ -51,7 +54,7 @@
     
     NSString *postData = [NSString stringWithFormat:@"%@ %@. %@ %@", labelUserName.text, labelCar.text, labelFeatures.text, tagText.text];
     
-    NSLog(@"%@",[self.dataAccess postProspectData: UIImagePNGRepresentation(image.image) and: postData]);
+    NSLog(@"%@",[self.socialIntegratorDataAccess postProspectData: UIImagePNGRepresentation(image.image) and: postData]);
 }
 
 -(IBAction)sliderMoved:(id)sender{

@@ -127,7 +127,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SQL-3f-poU">
                                 <items>
                                     <navigationItem title="Review Data" id="6zH-fE-tlx">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="K2R-VA-54X">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="K2R-VA-54X">
                                             <connections>
                                                 <segue destination="4" kind="modal" id="adO-Q2-kje"/>
                                             </connections>
@@ -248,16 +248,79 @@
             </objects>
             <point key="canvasLocation" x="999" y="-501"/>
         </scene>
-        <!--View Controller - Post-->
+        <!--Second View Controller Step2 - Post-->
         <scene sceneID="ZFu-lQ-v0y">
             <objects>
-                <viewController id="aqQ-7V-sIA" sceneMemberID="viewController">
+                <viewController id="aqQ-7V-sIA" customClass="MQSecondViewControllerStep2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qAn-vU-U0a">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="231" translatesAutoresizingMaskIntoConstraints="NO" id="OHK-0p-XUY">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="4Of-Zd-GXm"/>
+                                    <constraint firstAttribute="width" constant="231" id="sw7-ot-xKw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter any additional information here." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1rk-fm-3lm">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="286" id="uX9-bJ-UpM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ju-3H-wP1">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="249" id="RzF-Iv-ObR"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4S-gb-j6z">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="78K-Of-OTT"/>
+                                    <constraint firstAttribute="width" constant="40" id="re5-7k-tW8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="168-upload-photo-2.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadButtonClicked:" destination="szq-GH-tTU" eventType="touchUpInside" id="03z-ZC-mbJ"/>
+                                    <action selector="uploadMerchandizeData:" destination="aqQ-7V-sIA" eventType="touchUpInside" id="Ljc-I4-zbK"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1rk-fm-3lm" firstAttribute="leading" secondItem="qAn-vU-U0a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="57M-PD-M1m"/>
+                            <constraint firstItem="1rk-fm-3lm" firstAttribute="top" secondItem="qAn-vU-U0a" secondAttribute="top" constant="96" id="8oj-k7-UaI"/>
+                            <constraint firstItem="OHK-0p-XUY" firstAttribute="leading" secondItem="qAn-vU-U0a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RMW-vt-SU9"/>
+                            <constraint firstItem="n4S-gb-j6z" firstAttribute="trailing" secondItem="1rk-fm-3lm" secondAttribute="trailing" type="default" id="biu-jj-MUN"/>
+                            <constraint firstItem="2Ju-3H-wP1" firstAttribute="leading" secondItem="qAn-vU-U0a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="cZp-s4-AK7"/>
+                            <constraint firstItem="OHK-0p-XUY" firstAttribute="top" secondItem="qAn-vU-U0a" secondAttribute="top" constant="20" symbolic="YES" type="default" id="l7J-yr-WHx"/>
+                            <constraint firstItem="n4S-gb-j6z" firstAttribute="top" secondItem="qAn-vU-U0a" secondAttribute="top" constant="13" id="ttD-bh-Anc"/>
+                            <constraint firstItem="2Ju-3H-wP1" firstAttribute="top" secondItem="qAn-vU-U0a" secondAttribute="top" constant="135" id="urp-lz-pIH"/>
+                            <constraint firstItem="2Ju-3H-wP1" firstAttribute="trailing" secondItem="1rk-fm-3lm" secondAttribute="trailing" type="default" id="zBl-d8-xMy"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Post" id="8sS-7i-Iu9"/>
+                    <navigationItem key="navigationItem" title="Post" id="8sS-7i-Iu9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="Muq-hQ-0bD">
+                            <connections>
+                                <action selector="selectImageClicked:" destination="aqQ-7V-sIA" id="s5p-bR-mCI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="additionalText" destination="1rk-fm-3lm" id="5yr-Be-wVE"/>
+                        <outlet property="image" destination="2Ju-3H-wP1" id="kyw-2b-cTS"/>
+                        <outlet property="merchandizeText" destination="OHK-0p-XUY" id="wJ7-nj-uVK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etm-MQ-tba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -351,6 +414,49 @@
         <image name="168-upload-photo-2.png" width="22" height="25"/>
         <image name="91-beaker-2.png" width="20" height="24"/>
     </resources>
+    <classes>
+        <class className="MQFirstViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MQFirstViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="segmentedControlIndexChanged"/>
+                <relationship kind="outlet" name="segmentedControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="MQSecondViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MQSecondViewController.h"/>
+        </class>
+        <class className="MQSecondViewControllerStep2" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MQSecondViewControllerStep2.h"/>
+            <relationships>
+                <relationship kind="action" name="selectImageClicked:"/>
+                <relationship kind="action" name="uploadMerchandizeData:"/>
+                <relationship kind="outlet" name="additionalText" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="imagePicker" candidateClass="UIImagePickerController"/>
+                <relationship kind="outlet" name="merchandizeText" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="MQViewController1Step2" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MQViewController1Step2.h"/>
+            <relationships>
+                <relationship kind="action" name="selectImageButtonClicked:"/>
+                <relationship kind="action" name="sliderMoved:"/>
+                <relationship kind="action" name="uploadButtonClicked:"/>
+                <relationship kind="outlet" name="buttonUpload" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="contentSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="imagePicker" candidateClass="UIImagePickerController"/>
+                <relationship kind="outlet" name="labelCar" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelFeatures" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelUserName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="selectImage" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="tagText" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

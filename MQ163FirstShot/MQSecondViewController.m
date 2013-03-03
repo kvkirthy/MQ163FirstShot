@@ -9,6 +9,7 @@
 #import "MQSecondViewController.h"
 #import "MQMerchandize.h"
 #import "MQMerchandizeDataAccess.h"
+#import "MQSecondViewControllerStep2.h"
 
 @interface MQSecondViewController ()
 
@@ -69,6 +70,14 @@
 {
     self.viewModel = returnData;
     [self.tableView reloadData];
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    MQSecondViewControllerStep2 *view = [segue destinationViewController];
+    MQMerchandize *data= [self.viewModel objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+    view.merchandizeData = data;
+    
 }
 
 @end

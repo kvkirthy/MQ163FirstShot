@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1002A39D16C9891B001F910B /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002A39C16C9891B001F910B /* 112-group.png */; };
+		1028101A16E344F10030D9B5 /* MQSecondViewControllerStep2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1028101916E344F10030D9B5 /* MQSecondViewControllerStep2.m */; };
+		1028101D16E3581F0030D9B5 /* MQSocialIntegratorAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1028101C16E3581F0030D9B5 /* MQSocialIntegratorAccess.m */; };
 		10758ABE16CBDB9000A9F570 /* MQViewController1Step2.m in Sources */ = {isa = PBXBuildFile; fileRef = 10758ABD16CBDB9000A9F570 /* MQViewController1Step2.m */; };
 		107970B816E1260300654E7F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 107970B716E1260300654E7F /* Settings.bundle */; };
 		10A265DA16C7A67900627C27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A265D916C7A67900627C27 /* UIKit.framework */; };
@@ -39,6 +41,10 @@
 
 /* Begin PBXFileReference section */
 		1002A39C16C9891B001F910B /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
+		1028101816E344F10030D9B5 /* MQSecondViewControllerStep2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQSecondViewControllerStep2.h; sourceTree = "<group>"; };
+		1028101916E344F10030D9B5 /* MQSecondViewControllerStep2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQSecondViewControllerStep2.m; sourceTree = "<group>"; };
+		1028101B16E3581F0030D9B5 /* MQSocialIntegratorAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQSocialIntegratorAccess.h; sourceTree = "<group>"; };
+		1028101C16E3581F0030D9B5 /* MQSocialIntegratorAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQSocialIntegratorAccess.m; sourceTree = "<group>"; };
 		10758ABC16CBDB9000A9F570 /* MQViewController1Step2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQViewController1Step2.h; sourceTree = "<group>"; };
 		10758ABD16CBDB9000A9F570 /* MQViewController1Step2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQViewController1Step2.m; sourceTree = "<group>"; };
 		107970B716E1260300654E7F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -143,6 +149,8 @@
 				10A2660316C7A67A00627C27 /* second@2x.png */,
 				10A265E016C7A67900627C27 /* Supporting Files */,
 				10E8AB0E16D37DB900C4EC0A /* Entities */,
+				1028101816E344F10030D9B5 /* MQSecondViewControllerStep2.h */,
+				1028101916E344F10030D9B5 /* MQSecondViewControllerStep2.m */,
 			);
 			path = MQ163FirstShot;
 			sourceTree = "<group>";
@@ -173,6 +181,8 @@
 				10E6D1F516D93EBE005CFA4D /* MQDataAccessProtocol.h */,
 				10E6D1F716D9582A005CFA4D /* MQMerchandizeDataAccess.h */,
 				10E6D1F816D9582A005CFA4D /* MQMerchandizeDataAccess.m */,
+				1028101B16E3581F0030D9B5 /* MQSocialIntegratorAccess.h */,
+				1028101C16E3581F0030D9B5 /* MQSocialIntegratorAccess.m */,
 			);
 			name = DataAccess;
 			sourceTree = "<group>";
@@ -275,6 +285,8 @@
 				10E8AB1116D37E9D00C4EC0A /* MQMerchandize.m in Sources */,
 				10E6D1F416D92E48005CFA4D /* MQProspectDataAccess.m in Sources */,
 				10E6D1F916D9582A005CFA4D /* MQMerchandizeDataAccess.m in Sources */,
+				1028101A16E344F10030D9B5 /* MQSecondViewControllerStep2.m in Sources */,
+				1028101D16E3581F0030D9B5 /* MQSocialIntegratorAccess.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
