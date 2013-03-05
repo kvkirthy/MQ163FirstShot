@@ -7,8 +7,40 @@
 //
 
 #import "MQSocialIntegratorAccess.h"
+#import "MQDataAccessProtocol.h"
+#import "MQFacebookStory.h"
 
 @implementation MQSocialIntegratorAccess
+
+
+-(id) initWithObject:(id)obj
+{
+    callingObject = obj;
+    return self;
+}
+
+-(void) getAllStoriesOnPage
+{
+    NSString *url = [NSString stringWithFormat:@"%@/%@",[[NSUserDefaults standardUserDefaults] stringForKey:@"baseApiUrl"],[[NSUserDefaults standardUserDefaults] stringForKey:@"facebookIntegrator"]];
+    
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+    
+    NSURLConnection *urlConnection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
+    
+    if(urlConnection )
+    {
+        if(receivedData)
+        {
+            [receivedData setLength:0];
+        }
+        else{
+            receivedData = [NSMutableData data];
+        }
+    }
+    else{
+        NSLog(@"Error connecting");
+    }
+}
 
 -(NSString*) postProspectData: (NSData *) imageData and: (NSString *) postData
 {
@@ -44,5 +76,45 @@
     return returnString;
     
 }
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    [receivedData setLength:0];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    [receivedData appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    // inform the user
+    NSLog(@"Connection failed! Error - %@ %@",
+          [error localizedDescription],
+          [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    
+    NSString *wholeData = [[NSString alloc] initWithData:receivedData encoding:NSASCIIStringEncoding];
+    NSMutableArray *returnData = [[NSMutableArray alloc]init];
+    NSLog(@"%@", wholeData);
+    
+    NSError *error = nil;
+    
+    NSDictionary *res = [NSJSONSerialization JSONObjectWithData:receivedData options:NSJSONReadingMutableLeaves error:&error];
+    
+    for(id obj in res)
+    {
+        MQFacebookStory *story = [[MQFacebookStory alloc]initWithTitle:[obj objectForKey:@"PostText"] CommentCount:[obj objectForKey:@"CommentCount"] AndLikeCount:[obj objectForKey:@"LikeCount"] ];
+        [returnData addObject:story];
+    }
+    
+    [callingObject returnDataObject:returnData];
+    //  [self.tableView reloadData];
+}
+
 
 @end

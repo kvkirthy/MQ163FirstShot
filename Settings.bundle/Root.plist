@@ -22,6 +22,18 @@
 			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
 			<key>Title</key>
+			<string>Facebook Integrator</string>
+			<key>DefaultValue</key>
+			<string>facebook</string>
+			<key>IsSecure</key>
+			<false/>
+			<key>Key</key>
+			<string>facebookIntegrator</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
 			<string>Merchandize API URL</string>
 			<key>DefaultValue</key>
 			<string>merchandize</string>

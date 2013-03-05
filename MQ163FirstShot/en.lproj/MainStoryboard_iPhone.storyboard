@@ -326,20 +326,20 @@
             </objects>
             <point key="canvasLocation" x="1502" y="-505"/>
         </scene>
-        <!--Table View Controller - Engineer-->
+        <!--Engineer View Controller - Engineer-->
         <scene sceneID="dua-Qb-Yju">
             <objects>
-                <tableViewController id="pwi-le-qti" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wsw-HH-dpS">
+                <tableViewController id="pwi-le-qti" customClass="MQEngineerViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="wsw-HH-dpS">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="engineerCellTemplate" textLabel="WMg-5f-3eT" detailTextLabel="ejs-Qa-Onf" style="IBUITableViewCellStyleSubtitle" id="3fx-0U-1Mm">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="engineerCellTemplate" textLabel="WMg-5f-3eT" detailTextLabel="ejs-Qa-Onf" style="IBUITableViewCellStyleSubtitle" id="3fx-0U-1Mm">
+                                <rect key="frame" x="0.0" y="46" width="320" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="10" y="1" width="280" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMg-5f-3eT">
@@ -357,10 +357,6 @@
                                 </view>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="pwi-le-qti" id="3sf-1f-BX4"/>
-                            <outlet property="delegate" destination="pwi-le-qti" id="ZQt-Ta-S63"/>
-                        </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Engineer" image="91-beaker-2.png" id="AIp-pZ-dTb"/>
                 </tableViewController>
@@ -415,6 +411,9 @@
         <image name="91-beaker-2.png" width="20" height="24"/>
     </resources>
     <classes>
+        <class className="MQEngineerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MQEngineerViewController.h"/>
+        </class>
         <class className="MQFirstViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MQFirstViewController.h"/>
             <relationships>

@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MQDataAccessProtocol.h"
 
 @interface MQSocialIntegratorAccess : NSObject
+{
+        id<MQDataAccessProtocol> callingObject;
+        NSMutableData *receivedData;
+}
+-(id) initWithObject: (id<MQDataAccessProtocol>) obj;
 -(NSString *) postProspectData: (NSData *) imageData and: (NSString *) postData;
+-(void) getAllStoriesOnPage;
 @end

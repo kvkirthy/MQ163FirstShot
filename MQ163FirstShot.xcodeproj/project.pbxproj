@@ -10,6 +10,8 @@
 		1002A39D16C9891B001F910B /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002A39C16C9891B001F910B /* 112-group.png */; };
 		1028101A16E344F10030D9B5 /* MQSecondViewControllerStep2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1028101916E344F10030D9B5 /* MQSecondViewControllerStep2.m */; };
 		1028101D16E3581F0030D9B5 /* MQSocialIntegratorAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1028101C16E3581F0030D9B5 /* MQSocialIntegratorAccess.m */; };
+		1028102016E540120030D9B5 /* MQFacebookStory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1028101F16E540120030D9B5 /* MQFacebookStory.m */; };
+		1028102316E543A00030D9B5 /* MQEngineerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1028102216E5439F0030D9B5 /* MQEngineerViewController.m */; };
 		10758ABE16CBDB9000A9F570 /* MQViewController1Step2.m in Sources */ = {isa = PBXBuildFile; fileRef = 10758ABD16CBDB9000A9F570 /* MQViewController1Step2.m */; };
 		107970B816E1260300654E7F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 107970B716E1260300654E7F /* Settings.bundle */; };
 		10A265DA16C7A67900627C27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A265D916C7A67900627C27 /* UIKit.framework */; };
@@ -45,6 +47,10 @@
 		1028101916E344F10030D9B5 /* MQSecondViewControllerStep2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQSecondViewControllerStep2.m; sourceTree = "<group>"; };
 		1028101B16E3581F0030D9B5 /* MQSocialIntegratorAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQSocialIntegratorAccess.h; sourceTree = "<group>"; };
 		1028101C16E3581F0030D9B5 /* MQSocialIntegratorAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQSocialIntegratorAccess.m; sourceTree = "<group>"; };
+		1028101E16E540120030D9B5 /* MQFacebookStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQFacebookStory.h; sourceTree = "<group>"; };
+		1028101F16E540120030D9B5 /* MQFacebookStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQFacebookStory.m; sourceTree = "<group>"; };
+		1028102116E5439F0030D9B5 /* MQEngineerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQEngineerViewController.h; sourceTree = "<group>"; };
+		1028102216E5439F0030D9B5 /* MQEngineerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQEngineerViewController.m; sourceTree = "<group>"; };
 		10758ABC16CBDB9000A9F570 /* MQViewController1Step2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQViewController1Step2.h; sourceTree = "<group>"; };
 		10758ABD16CBDB9000A9F570 /* MQViewController1Step2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQViewController1Step2.m; sourceTree = "<group>"; };
 		107970B716E1260300654E7F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -151,6 +157,8 @@
 				10E8AB0E16D37DB900C4EC0A /* Entities */,
 				1028101816E344F10030D9B5 /* MQSecondViewControllerStep2.h */,
 				1028101916E344F10030D9B5 /* MQSecondViewControllerStep2.m */,
+				1028102116E5439F0030D9B5 /* MQEngineerViewController.h */,
+				1028102216E5439F0030D9B5 /* MQEngineerViewController.m */,
 			);
 			path = MQ163FirstShot;
 			sourceTree = "<group>";
@@ -194,6 +202,8 @@
 				10A2660F16C7C4FA00627C27 /* MQPersonEntity.m */,
 				10E8AB0F16D37E9D00C4EC0A /* MQMerchandize.h */,
 				10E8AB1016D37E9D00C4EC0A /* MQMerchandize.m */,
+				1028101E16E540120030D9B5 /* MQFacebookStory.h */,
+				1028101F16E540120030D9B5 /* MQFacebookStory.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -287,6 +297,8 @@
 				10E6D1F916D9582A005CFA4D /* MQMerchandizeDataAccess.m in Sources */,
 				1028101A16E344F10030D9B5 /* MQSecondViewControllerStep2.m in Sources */,
 				1028101D16E3581F0030D9B5 /* MQSocialIntegratorAccess.m in Sources */,
+				1028102016E540120030D9B5 /* MQFacebookStory.m in Sources */,
+				1028102316E543A00030D9B5 /* MQEngineerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
