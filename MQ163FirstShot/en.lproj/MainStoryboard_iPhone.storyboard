@@ -326,12 +326,12 @@
             </objects>
             <point key="canvasLocation" x="1502" y="-505"/>
         </scene>
-        <!--Engineer View Controller - Engineer-->
+        <!--Engineer View Controller - Facebook Posts-->
         <scene sceneID="dua-Qb-Yju">
             <objects>
                 <tableViewController id="pwi-le-qti" customClass="MQEngineerViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="wsw-HH-dpS">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
@@ -358,11 +358,11 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Engineer" image="91-beaker-2.png" id="AIp-pZ-dTb"/>
+                    <navigationItem key="navigationItem" title="Facebook Posts" id="Cna-5i-VY1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uUb-hm-QlA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="397" y="172"/>
+            <point key="canvasLocation" x="923" y="172"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -377,7 +377,7 @@
                     <connections>
                         <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
                         <segue destination="JFy-6H-L3H" kind="relationship" relationship="viewControllers" id="27"/>
-                        <segue destination="pwi-le-qti" kind="relationship" relationship="viewControllers" id="Qoz-9F-Tdh"/>
+                        <segue destination="LuM-gs-zNf" kind="relationship" relationship="viewControllers" id="Qoz-9F-Tdh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
@@ -403,6 +403,25 @@
             </objects>
             <point key="canvasLocation" x="397" y="-501"/>
         </scene>
+        <!--Navigation Controller - Engineer-->
+        <scene sceneID="TzB-GY-DVr">
+            <objects>
+                <navigationController id="LuM-gs-zNf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Engineer" image="91-beaker-2.png" id="AIp-pZ-dTb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HK9-pI-jf8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pwi-le-qti" kind="relationship" relationship="rootViewController" id="rzm-by-BMT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dRt-Dt-1nt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="397" y="172"/>
+        </scene>
     </scenes>
     <resources>
         <image name="112-group.png" width="32" height="21"/>
@@ -410,52 +429,6 @@
         <image name="168-upload-photo-2.png" width="22" height="25"/>
         <image name="91-beaker-2.png" width="20" height="24"/>
     </resources>
-    <classes>
-        <class className="MQEngineerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MQEngineerViewController.h"/>
-        </class>
-        <class className="MQFirstViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MQFirstViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="segmentedControlIndexChanged"/>
-                <relationship kind="outlet" name="segmentedControl" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-        <class className="MQSecondViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MQSecondViewController.h"/>
-        </class>
-        <class className="MQSecondViewControllerStep2" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MQSecondViewControllerStep2.h"/>
-            <relationships>
-                <relationship kind="action" name="selectImageClicked:"/>
-                <relationship kind="action" name="uploadMerchandizeData:"/>
-                <relationship kind="outlet" name="additionalText" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="imagePicker" candidateClass="UIImagePickerController"/>
-                <relationship kind="outlet" name="merchandizeText" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="MQViewController1Step2" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MQViewController1Step2.h"/>
-            <relationships>
-                <relationship kind="action" name="selectImageButtonClicked:"/>
-                <relationship kind="action" name="sliderMoved:"/>
-                <relationship kind="action" name="uploadButtonClicked:"/>
-                <relationship kind="outlet" name="buttonUpload" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="contentSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="imagePicker" candidateClass="UIImagePickerController"/>
-                <relationship kind="outlet" name="labelCar" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="labelFeatures" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="labelUserName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="selectImage" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="tagText" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

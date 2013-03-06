@@ -20,5 +20,6 @@
 
 -(IBAction) segmentedControlIndexChanged;
 -(void)returnDataObject:(NSMutableArray *)returnData;
+-(void) showErrorMessage: (NSString *) errorMessage;
 
 @end

@@ -77,6 +77,11 @@
     [self.tableView reloadData];
 }
 
+-(void) showErrorMessage: (NSString *) errorMessage
+{
+    [[[UIAlertView alloc] initWithTitle:@"Error getting data" message:errorMessage delegate:self cancelButtonTitle:@"Gosh! Okay" otherButtonTitles:nil,nil] show];
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

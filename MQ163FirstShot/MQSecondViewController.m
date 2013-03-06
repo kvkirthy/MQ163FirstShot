@@ -72,6 +72,11 @@
     [self.tableView reloadData];
 }
 
+-(void) showErrorMessage: (NSString *) errorMessage
+{
+    [[[UIAlertView alloc] initWithTitle:@"Error getting data" message:errorMessage delegate:self cancelButtonTitle:@"Gosh! Okay" otherButtonTitles:nil,nil] show];
+}
+
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     MQSecondViewControllerStep2 *view = [segue destinationViewController];

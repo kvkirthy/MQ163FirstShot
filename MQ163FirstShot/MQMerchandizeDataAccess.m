@@ -56,10 +56,9 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-    // inform the user
-    NSLog(@"Connection failed! Error - %@ %@",
-          [error localizedDescription],
-          [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
+    [callingObject showErrorMessage:[NSString stringWithFormat:@"Connection failed! Error - %@ %@",
+                                     [error localizedDescription],
+                                     [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]]];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection

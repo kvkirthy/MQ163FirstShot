@@ -133,4 +133,9 @@
     [self.tableView reloadData];
 }
 
+-(void) showErrorMessage: (NSString *) errorMessage
+{
+    [[[UIAlertView alloc] initWithTitle:@"Error getting data" message:errorMessage delegate:self cancelButtonTitle:@"Gosh! Okay" otherButtonTitles:nil,nil] show];
+}
+
 @end

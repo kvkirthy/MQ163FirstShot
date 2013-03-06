@@ -17,6 +17,7 @@
 @property (strong, nonatomic) MQMerchandizeDataAccess *dataAccess;
 
 -(void)returnDataObject:(NSMutableArray *)returnData;
+-(void) showErrorMessage: (NSString *) errorMessage;
 
 
 @end
