@@ -39,7 +39,7 @@
         }
     }
     else{
-        NSLog(@"Error connecting");
+        [callingObject showErrorMessage: @"Error connecting"];
     }
 }
 
@@ -63,23 +63,27 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    
-    NSString *wholeData = [[NSString alloc] initWithData:receivedData encoding:NSASCIIStringEncoding];
-    NSMutableArray *returnData = [[NSMutableArray alloc]init];
-    NSLog(@"%@", wholeData);
-    
-    NSError *error = nil;
-    
-    NSDictionary *res = [NSJSONSerialization JSONObjectWithData:receivedData options:NSJSONReadingMutableLeaves error:&error];
-    
-    for(id obj in res)
-    {
-        MQMerchandize *merchandize = [[MQMerchandize alloc]initWithTitle:[obj objectForKey:@"Title"] Details:[obj objectForKey:@"Details"]];
-        [returnData addObject:merchandize];
+    @try {
+        NSString *wholeData = [[NSString alloc] initWithData:receivedData encoding:NSASCIIStringEncoding];
+        NSMutableArray *returnData = [[NSMutableArray alloc]init];
+        NSLog(@"%@", wholeData);
+        
+        NSError *error = nil;
+        
+        NSDictionary *res = [NSJSONSerialization JSONObjectWithData:receivedData options:NSJSONReadingMutableLeaves error:&error];
+        
+        for(id obj in res)
+        {
+            MQMerchandize *merchandize = [[MQMerchandize alloc]initWithTitle:[obj objectForKey:@"Title"] Details:[obj objectForKey:@"Details"]];
+            [returnData addObject:merchandize];
+        }
+        
+        [callingObject returnDataObject:returnData];
+
     }
-    
-    [callingObject returnDataObject:returnData];
-    //  [self.tableView reloadData];
+    @catch (NSException *exception) {
+        [callingObject showErrorMessage: [NSString stringWithFormat:@"Error with returned data - Possible DB connection error. %@", exception]];
+    }
 }
 
 @end
