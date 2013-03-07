@@ -42,19 +42,24 @@
         imagePicker = [[UIImagePickerController alloc] init];
         imagePicker.delegate = self;
         
-        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-            imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-        }
+
         imagePicker.allowsEditing = YES;
     }
 }
 
 -(IBAction)uploadButtonClicked :(id)sender{
-    //NSLog(@"clicked");
     
-    NSString *postData = [NSString stringWithFormat:@"%@ %@. %@ %@", labelUserName.text, labelCar.text, labelFeatures.text, tagText.text];
+    @try {
+        NSString *postData = [NSString stringWithFormat:@"%@ %@. %@ %@", labelUserName.text, labelCar.text, labelFeatures.text, tagText.text];
+        
+        NSLog(@"%@",[self.socialIntegratorDataAccess postProspectData: UIImagePNGRepresentation(image.image) and: postData]);
+        [[[UIAlertView alloc] initWithTitle:@"Done!" message:@"Posted on Facebook." delegate:self cancelButtonTitle:@"Cool" otherButtonTitles:nil,nil] show];
+        
+    }
+    @catch (NSException *exception) {
+        [[[UIAlertView alloc] initWithTitle:@"Error getting data" message: [NSString stringWithFormat:@"Error posting- %@", [exception description]] delegate:self cancelButtonTitle:@"Gosh! Okay" otherButtonTitles:nil,nil] show];
+    }
     
-    NSLog(@"%@",[self.socialIntegratorDataAccess postProspectData: UIImagePNGRepresentation(image.image) and: postData]);
 }
 
 -(IBAction)sliderMoved:(id)sender{
@@ -94,7 +99,16 @@
 
 -(void) selectImageButtonClicked:(id)sender
 {
+    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     [self presentViewController:imagePicker animated:YES completion:nil];
+}
+
+- (IBAction)selectNewImageButtonClicked:(id)sender
+{
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    [self presentViewController:imagePicker animated:YES completion:nil];
+    
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker

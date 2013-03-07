@@ -27,4 +27,5 @@
  - (IBAction)selectImageButtonClicked:(id)sender;
  - (IBAction)uploadButtonClicked :(id)sender;
  - (IBAction)sliderMoved:(id)sender;
+- (IBAction)selectNewImageButtonClicked:(id)sender;
 @end
