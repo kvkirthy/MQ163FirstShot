@@ -64,6 +64,19 @@
     
 }
 
+-(IBAction)refreshData:(id)sender
+{
+    if(segmentedControl.selectedSegmentIndex ==0 )
+    {
+        [self.dataAccess getLeadsDataOnNetwork];
+    }
+    else if (segmentedControl.selectedSegmentIndex ==1 )
+    {
+        [self.dataAccess getCustomerDataOnNetwork];
+    }
+
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

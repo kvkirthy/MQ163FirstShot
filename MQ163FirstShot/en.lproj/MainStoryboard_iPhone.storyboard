@@ -19,7 +19,7 @@
                                 <navigationItem id="mWH-8i-DiD">
                                     <nil key="title"/>
                                     <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="gCK-1w-bYB">
-                                        <rect key="frame" x="39" y="7" width="242" height="31"/>
+                                        <rect key="frame" x="31" y="7" width="242" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <segments>
                                             <segment title="Leads"/>
@@ -29,6 +29,11 @@
                                             <action selector="segmentedControlIndexChanged" destination="2" eventType="valueChanged" id="0zv-Yl-WZ4"/>
                                         </connections>
                                     </segmentedControl>
+                                    <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="MjF-2G-EE0">
+                                        <connections>
+                                            <action selector="refreshData:" destination="2" id="GFx-OF-NqQ"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </navigationItem>
                             </items>
                         </navigationBar>
@@ -242,7 +247,13 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Merchandize deals" id="25G-Cg-8Pp"/>
+                    <navigationItem key="navigationItem" title="Merchandize deals" id="25G-Cg-8Pp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="dmG-QM-8a5">
+                            <connections>
+                                <action selector="refreshMerchandizeData:" destination="3" id="6Hy-jm-Dfk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
@@ -358,7 +369,13 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Facebook Posts" id="Cna-5i-VY1"/>
+                    <navigationItem key="navigationItem" title="Facebook Posts" id="Cna-5i-VY1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="dRn-M4-yHi">
+                            <connections>
+                                <action selector="refreshFacebookData:" destination="pwi-le-qti" id="9ls-bk-B4h"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uUb-hm-QlA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -429,6 +446,59 @@
         <image name="168-upload-photo-2.png" width="22" height="25"/>
         <image name="91-beaker-2.png" width="20" height="24"/>
     </resources>
+    <classes>
+        <class className="MQEngineerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MQEngineerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="refreshFacebookData:"/>
+            </relationships>
+        </class>
+        <class className="MQFirstViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MQFirstViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="refreshData:"/>
+                <relationship kind="action" name="segmentedControlIndexChanged"/>
+                <relationship kind="outlet" name="segmentedControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="MQSecondViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MQSecondViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="refreshMerchandizeData:"/>
+            </relationships>
+        </class>
+        <class className="MQSecondViewControllerStep2" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MQSecondViewControllerStep2.h"/>
+            <relationships>
+                <relationship kind="action" name="selectImageClicked:"/>
+                <relationship kind="action" name="uploadMerchandizeData:"/>
+                <relationship kind="outlet" name="additionalText" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="imagePicker" candidateClass="UIImagePickerController"/>
+                <relationship kind="outlet" name="merchandizeText" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="MQViewController1Step2" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MQViewController1Step2.h"/>
+            <relationships>
+                <relationship kind="action" name="selectImageButtonClicked:"/>
+                <relationship kind="action" name="sliderMoved:"/>
+                <relationship kind="action" name="uploadButtonClicked:"/>
+                <relationship kind="outlet" name="buttonUpload" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="contentSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="imagePicker" candidateClass="UIImagePickerController"/>
+                <relationship kind="outlet" name="labelCar" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelFeatures" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelUserName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="selectImage" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="tagText" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

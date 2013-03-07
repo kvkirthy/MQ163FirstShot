@@ -17,5 +17,6 @@
 @property (strong, nonatomic) MQSocialIntegratorAccess  *dataAccess;
 -(void)returnDataObject:(NSMutableArray *)returnData;
 -(void) showErrorMessage: (NSString *) errorMessage;
+-(IBAction)refreshFacebookData:(id)sender;
 
 @end

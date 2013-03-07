@@ -35,6 +35,11 @@
     [self.dataAccess getAllStoriesOnPage];
 }
 
+-(IBAction)refreshFacebookData:(id)sender;
+{
+    [self.dataAccess getAllStoriesOnPage];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

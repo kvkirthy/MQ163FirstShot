@@ -393,10 +393,12 @@
 		10A2660816C7A67A00627C27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ADP India (SS42A4AAFV)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MQ163FirstShot/MQ163FirstShot-Prefix.pch";
 				INFOPLIST_FILE = "MQ163FirstShot/MQ163FirstShot-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0B896899-C751-43C1-B09B-823E026E7F94";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -404,10 +406,12 @@
 		10A2660916C7A67A00627C27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ADP India (SS42A4AAFV)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MQ163FirstShot/MQ163FirstShot-Prefix.pch";
 				INFOPLIST_FILE = "MQ163FirstShot/MQ163FirstShot-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

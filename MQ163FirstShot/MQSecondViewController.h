@@ -19,5 +19,7 @@
 -(void)returnDataObject:(NSMutableArray *)returnData;
 -(void) showErrorMessage: (NSString *) errorMessage;
 
+-(IBAction)refreshMerchandizeData:(id)sender;
+
 
 @end

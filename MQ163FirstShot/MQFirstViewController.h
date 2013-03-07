@@ -22,4 +22,6 @@
 -(void)returnDataObject:(NSMutableArray *)returnData;
 -(void) showErrorMessage: (NSString *) errorMessage;
 
+-(IBAction)refreshData:(id)sender;
+
 @end

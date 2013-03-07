@@ -85,4 +85,9 @@
     
 }
 
+-(IBAction)refreshMerchandizeData:(id)sender
+{
+    [self.dataAccess getMerchandizeDataOnNetwork];
+}
+
 @end
