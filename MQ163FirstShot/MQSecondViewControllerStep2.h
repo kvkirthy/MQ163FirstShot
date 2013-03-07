@@ -10,7 +10,7 @@
 
 @class MQMerchandize, MQSocialIntegratorAccess;
 
-@interface MQSecondViewControllerStep2 : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface MQSecondViewControllerStep2 : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
 {
     IBOutlet UILabel *merchandizeText;
     IBOutlet UITextField *additionalText;

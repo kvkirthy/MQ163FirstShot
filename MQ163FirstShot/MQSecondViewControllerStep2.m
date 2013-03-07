@@ -35,6 +35,9 @@
             merchandizeText.text = [NSString stringWithFormat:@"%@. %@", self.merchandizeData.title, self.merchandizeData.details];
         }
         
+        additionalText.delegate = self;
+        
+        
         self.socialDataAccess = [[MQSocialIntegratorAccess alloc] init];
         
         imagePicker = [[UIImagePickerController alloc] init];
@@ -51,6 +54,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 -(IBAction) selectImageClicked:(id)sender
