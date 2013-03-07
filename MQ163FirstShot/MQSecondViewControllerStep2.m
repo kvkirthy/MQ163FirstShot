@@ -69,9 +69,17 @@
 
 -(IBAction)uploadMerchandizeData:(id)sender
 {
-    NSString *postData = [NSString stringWithFormat:@"%@. %@", self.merchandizeData.title, self.merchandizeData.details];
+    @try {
+        NSString *postData = [NSString stringWithFormat:@"%@. %@", self.merchandizeData.title, self.merchandizeData.details];
+        
+        NSLog(@"%@",[self.socialDataAccess postProspectData: UIImagePNGRepresentation(image.image) and: postData]);
+        [[[UIAlertView alloc] initWithTitle:@"Done!" message:@"Posted on Facebook." delegate:self cancelButtonTitle:@"Cool" otherButtonTitles:nil,nil] show];
+    }
+    @catch (NSException *exception) {
+        [[[UIAlertView alloc] initWithTitle:@"Error getting data" message: [NSString stringWithFormat:@"Error posting- %@", [exception description]] delegate:self cancelButtonTitle:@"Gosh! Okay" otherButtonTitles:nil,nil] show];
+    }
     
-    NSLog(@"%@",[self.socialDataAccess postProspectData: UIImagePNGRepresentation(image.image) and: postData]);
+    
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker
