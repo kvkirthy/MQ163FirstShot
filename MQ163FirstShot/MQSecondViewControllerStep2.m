@@ -70,7 +70,7 @@
 -(IBAction)uploadMerchandizeData:(id)sender
 {
     @try {
-        NSString *postData = [NSString stringWithFormat:@"%@. %@", self.merchandizeData.title, self.merchandizeData.details];
+        NSString *postData = [NSString stringWithFormat:@"%@. %@. %@", self.merchandizeData.title, self.merchandizeData.details, additionalText.text];
         
         NSLog(@"%@",[self.socialDataAccess postProspectData: UIImagePNGRepresentation(image.image) and: postData]);
         [[[UIAlertView alloc] initWithTitle:@"Done!" message:@"Posted on Facebook." delegate:self cancelButtonTitle:@"Cool" otherButtonTitles:nil,nil] show];
