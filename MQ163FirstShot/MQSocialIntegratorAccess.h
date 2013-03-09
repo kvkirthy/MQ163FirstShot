@@ -17,4 +17,5 @@
 -(id) initWithObject: (id<MQDataAccessProtocol>) obj;
 -(NSString *) postProspectData: (NSData *) imageData and: (NSString *) postData;
 -(void) getAllStoriesOnPage;
+-(void) createLeadFirstName:(NSString*) pFirstName LastName: (NSString*) pLastName;
 @end

@@ -8,6 +8,16 @@
 			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
 			<key>Title</key>
+			<string>Create Lead</string>
+			<key>Key</key>
+			<string>createLead</string>
+			<key>DefaultValue</key>
+			<string>prospects/createLead?fullName=</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
 			<string>Base Url</string>
 			<key>Key</key>
 			<string>baseApiUrl</string>

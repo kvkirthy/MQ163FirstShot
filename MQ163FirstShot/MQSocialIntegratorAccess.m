@@ -48,8 +48,7 @@
         
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc]init];
         NSString *url = [NSString stringWithFormat:@"%@/%@",[[NSUserDefaults standardUserDefaults] stringForKey:@"baseApiUrl"],[[NSUserDefaults standardUserDefaults] stringForKey:@"socialIntegrator"]];
-        
-        //[request setURL:[NSURL URLWithString:@"http://192.168.2.11/api/SocialIntegrator"]];
+
         [request setURL:[NSURL URLWithString:url]];
         [request setHTTPMethod:@"POST"];
         
@@ -90,6 +89,29 @@
         return [NSString stringWithFormat:@"Failed to post on Facebook. %@", [exception reason]];
     }
     
+}
+
+-(void) createLeadFirstName:(NSString *)pFirstName LastName:(NSString *)pLastName
+{
+    NSString *url = [NSString stringWithFormat:@"%@/%@%@",[[NSUserDefaults standardUserDefaults] stringForKey:@"baseApiUrl"],[[NSUserDefaults standardUserDefaults] stringForKey:@"createLead"],[NSString stringWithFormat:@"%@%@", pFirstName, pLastName]];
+    
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+    
+    NSURLConnection *urlConnection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
+    
+    if(urlConnection )
+    {
+        if(receivedData)
+        {
+            [receivedData setLength:0];
+        }
+        else{
+            receivedData = [NSMutableData data];
+        }
+    }
+    else{
+        [callingObject showErrorMessage: @"Error connecting"];
+    }
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response

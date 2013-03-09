@@ -7,6 +7,7 @@
 //
 
 #import "MQCreateLeadScene.h"
+#import "MQSocialIntegratorAccess.h"
 
 @interface MQCreateLeadScene ()
 
@@ -29,6 +30,8 @@
     
     firstName.text = self.theFirstName;
     LastName.text = self.theLastName;
+    dataAccess = [[MQSocialIntegratorAccess alloc]init];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,7 +42,9 @@
 
 -(IBAction)SaveButtonClicked:(id)sender
 {
+    [dataAccess createLeadFirstName:firstName.text LastName:LastName.text];
     
+    [[[UIAlertView alloc] initWithTitle:@"Completed Action" message:@"Done posting data." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil,nil] show];
 }
 
 @end

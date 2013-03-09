@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class MQSocialIntegratorAccess;
+
 @interface MQCreateLeadScene : UIViewController{
     IBOutlet UITextField *firstName;
     IBOutlet UITextField *LastName;
     IBOutlet UIBarButtonItem *Save;
+    
+    MQSocialIntegratorAccess *dataAccess;
 }
 
 @property NSString *theFirstName;
