@@ -11,6 +11,7 @@
 		10038DF916E9A6B7000D5F61 /* MQFacebookDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 10038DF816E9A6B7000D5F61 /* MQFacebookDetailsVC.m */; };
 		10038DFC16EB09FF000D5F61 /* MQFbCommentsDataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 10038DFB16EB09FF000D5F61 /* MQFbCommentsDataAccess.m */; };
 		10038DFF16EB0C15000D5F61 /* MQFbComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 10038DFE16EB0C15000D5F61 /* MQFbComments.m */; };
+		10038E0216EB7A4D000D5F61 /* MQCreateLeadScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 10038E0116EB7A4D000D5F61 /* MQCreateLeadScene.m */; };
 		1028101A16E344F10030D9B5 /* MQSecondViewControllerStep2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1028101916E344F10030D9B5 /* MQSecondViewControllerStep2.m */; };
 		1028101D16E3581F0030D9B5 /* MQSocialIntegratorAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1028101C16E3581F0030D9B5 /* MQSocialIntegratorAccess.m */; };
 		1028102016E540120030D9B5 /* MQFacebookStory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1028101F16E540120030D9B5 /* MQFacebookStory.m */; };
@@ -54,6 +55,8 @@
 		10038DFB16EB09FF000D5F61 /* MQFbCommentsDataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQFbCommentsDataAccess.m; sourceTree = "<group>"; };
 		10038DFD16EB0C15000D5F61 /* MQFbComments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQFbComments.h; sourceTree = "<group>"; };
 		10038DFE16EB0C15000D5F61 /* MQFbComments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQFbComments.m; sourceTree = "<group>"; };
+		10038E0016EB7A4D000D5F61 /* MQCreateLeadScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQCreateLeadScene.h; sourceTree = "<group>"; };
+		10038E0116EB7A4D000D5F61 /* MQCreateLeadScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQCreateLeadScene.m; sourceTree = "<group>"; };
 		1028101816E344F10030D9B5 /* MQSecondViewControllerStep2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQSecondViewControllerStep2.h; sourceTree = "<group>"; };
 		1028101916E344F10030D9B5 /* MQSecondViewControllerStep2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQSecondViewControllerStep2.m; sourceTree = "<group>"; };
 		1028101B16E3581F0030D9B5 /* MQSocialIntegratorAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQSocialIntegratorAccess.h; sourceTree = "<group>"; };
@@ -174,6 +177,8 @@
 				1028102216E5439F0030D9B5 /* MQEngineerViewController.m */,
 				10038DF716E9A6B6000D5F61 /* MQFacebookDetailsVC.h */,
 				10038DF816E9A6B7000D5F61 /* MQFacebookDetailsVC.m */,
+				10038E0016EB7A4D000D5F61 /* MQCreateLeadScene.h */,
+				10038E0116EB7A4D000D5F61 /* MQCreateLeadScene.m */,
 			);
 			path = MQ163FirstShot;
 			sourceTree = "<group>";
@@ -325,6 +330,7 @@
 				10038DF916E9A6B7000D5F61 /* MQFacebookDetailsVC.m in Sources */,
 				10038DFC16EB09FF000D5F61 /* MQFbCommentsDataAccess.m in Sources */,
 				10038DFF16EB0C15000D5F61 /* MQFbComments.m in Sources */,
+				10038E0216EB7A4D000D5F61 /* MQCreateLeadScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import "MQFacebookDetailsVC.h"
 #import "MQFbCommentsDataAccess.h"
 #import "MQFbComments.h"
+#import "MQCreateLeadScene.h"
 
 @interface MQFacebookDetailsVC ()
 
@@ -104,6 +105,14 @@
     {
         [[[UIAlertView alloc] initWithTitle:@"Error getting data" message:errorMessage delegate:self cancelButtonTitle:@"Gosh! Okay" otherButtonTitles:nil,nil] show];
     }
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    MQCreateLeadScene *nextVc = [segue destinationViewController];
+    MQFbComments *story = [self.model objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+    nextVc.theFirstName = story.firstName;
+    nextVc.theLastName = story.lastName;
 }
 
 @end

@@ -17,9 +17,7 @@
     IBOutlet UIImagePickerController *imagePicker;
     IBOutlet UILabel *labelUserName, *labelCar, *labelFeatures, *tagText;
     IBOutlet UIButton *buttonUpload;
-    IBOutlet UISlider *contentSlider;
-    IBOutlet UIActivityIndicatorView *activityIndicator;
-    
+    IBOutlet UISlider *contentSlider;    
 }
 @property MQPersonEntity *user;
 @property MQProspectDataAccess *dataAccess;
