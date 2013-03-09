@@ -8,16 +8,6 @@
 			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
 			<key>Title</key>
-			<string>Create Lead</string>
-			<key>Key</key>
-			<string>createLead</string>
-			<key>DefaultValue</key>
-			<string>prospects/createLead?fullName=</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSTextFieldSpecifier</string>
-			<key>Title</key>
 			<string>Base Url</string>
 			<key>Key</key>
 			<string>baseApiUrl</string>
@@ -105,6 +95,16 @@
 			<string>facebook/comments?postId=</string>
 			<key>IsSecure</key>
 			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Create Lead</string>
+			<key>Key</key>
+			<string>createLead</string>
+			<key>DefaultValue</key>
+			<string>prospects/createLead?fullName=</string>
 		</dict>
 	</array>
 </dict>
