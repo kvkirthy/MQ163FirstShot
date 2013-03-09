@@ -84,6 +84,18 @@
 			<key>IsSecure</key>
 			<false/>
 		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Facebook Comments Uri</string>
+			<key>Key</key>
+			<string>fbCommentsUri</string>
+			<key>DefaultValue</key>
+			<string>facebook/comments?postId=</string>
+			<key>IsSecure</key>
+			<false/>
+		</dict>
 	</array>
 </dict>
 </plist>

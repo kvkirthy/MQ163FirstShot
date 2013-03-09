@@ -52,8 +52,8 @@
     @try {
         NSString *postData = [NSString stringWithFormat:@"%@ %@. %@ %@", labelUserName.text, labelCar.text, labelFeatures.text, tagText.text];
         
-        NSLog(@"%@",[self.socialIntegratorDataAccess postProspectData: UIImagePNGRepresentation(image.image) and: postData]);
-        [[[UIAlertView alloc] initWithTitle:@"Done!" message:@"Posted on Facebook." delegate:self cancelButtonTitle:@"Cool" otherButtonTitles:nil,nil] show];
+        NSString *status = [self.socialIntegratorDataAccess postProspectData: UIImagePNGRepresentation(image.image) and: postData];
+        [[[UIAlertView alloc] initWithTitle:@"Facebook Post" message:status delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil,nil] show];
         
     }
     @catch (NSException *exception) {

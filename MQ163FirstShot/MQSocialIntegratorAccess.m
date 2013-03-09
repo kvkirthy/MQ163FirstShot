@@ -72,13 +72,22 @@
         [request setHTTPBody:body];
         
         // [request setHTTPBodyStream:body];
+        NSHTTPURLResponse *response;
+        NSError *error;
         
-        NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-        NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
-        return returnString;
+        [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+        
+        if (response) {
+            if([response statusCode] != 200)
+            {
+                @throw [[NSException alloc] initWithName:@"Post on Facebook failed" reason:[NSString stringWithFormat:@"Error returned from %d",[response statusCode]] userInfo:nil];
+            }
+        }
+        
+        return @"Success - post on Facebook.";
     }
     @catch (NSException *exception) {
-        return [exception description];
+        return [NSString stringWithFormat:@"Failed to post on Facebook. %@", [exception reason]];
     }
     
 }
@@ -114,7 +123,7 @@
         
         for(id obj in res)
         {
-            MQFacebookStory *story = [[MQFacebookStory alloc]initWithTitle:[obj objectForKey:@"PostText"] CommentCount:[obj objectForKey:@"CommentCount"] AndLikeCount:[obj objectForKey:@"LikeCount"] ];
+            MQFacebookStory *story = [[MQFacebookStory alloc]initWithPostId:[obj objectForKey:@"Id"] Title:[obj objectForKey:@"PostText"] CommentCount:[obj objectForKey:@"CommentCount"] AndLikeCount:[obj objectForKey:@"LikeCount"] ];
             [returnData addObject:story];
         }
         

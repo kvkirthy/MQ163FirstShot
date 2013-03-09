@@ -18,6 +18,7 @@
     IBOutlet UILabel *labelUserName, *labelCar, *labelFeatures, *tagText;
     IBOutlet UIButton *buttonUpload;
     IBOutlet UISlider *contentSlider;
+    IBOutlet UIActivityIndicatorView *activityIndicator;
     
 }
 @property MQPersonEntity *user;
@@ -27,5 +28,5 @@
  - (IBAction)selectImageButtonClicked:(id)sender;
  - (IBAction)uploadButtonClicked :(id)sender;
  - (IBAction)sliderMoved:(id)sender;
-- (IBAction)selectNewImageButtonClicked:(id)sender;
+ - (IBAction)selectNewImageButtonClicked:(id)sender;
 @end

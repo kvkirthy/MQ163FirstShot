@@ -9,6 +9,7 @@
 #import "MQEngineerViewController.h"
 #import "MQFacebookStory.h"
 #import "MQSocialIntegratorAccess.h"
+#import "MQFacebookDetailsVC.h"
 
 @interface MQEngineerViewController ()
 
@@ -126,17 +127,24 @@
 }
 */
 
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    
+    if([segue.identifier isEqual: @"facebookPostsToDetails"])
+    {
+        MQFacebookDetailsVC *nextVc = [segue destinationViewController];
+        
+        MQFacebookStory *story = [self.model objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+        nextVc.thePostId = story.postId;
+    }
 }
 
+#pragma mark - Table view delegate
+/*
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    
+}
+*/
 @end

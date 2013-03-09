@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1002A39D16C9891B001F910B /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002A39C16C9891B001F910B /* 112-group.png */; };
+		10038DF916E9A6B7000D5F61 /* MQFacebookDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 10038DF816E9A6B7000D5F61 /* MQFacebookDetailsVC.m */; };
+		10038DFC16EB09FF000D5F61 /* MQFbCommentsDataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 10038DFB16EB09FF000D5F61 /* MQFbCommentsDataAccess.m */; };
+		10038DFF16EB0C15000D5F61 /* MQFbComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 10038DFE16EB0C15000D5F61 /* MQFbComments.m */; };
 		1028101A16E344F10030D9B5 /* MQSecondViewControllerStep2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1028101916E344F10030D9B5 /* MQSecondViewControllerStep2.m */; };
 		1028101D16E3581F0030D9B5 /* MQSocialIntegratorAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1028101C16E3581F0030D9B5 /* MQSocialIntegratorAccess.m */; };
 		1028102016E540120030D9B5 /* MQFacebookStory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1028101F16E540120030D9B5 /* MQFacebookStory.m */; };
@@ -45,6 +48,12 @@
 
 /* Begin PBXFileReference section */
 		1002A39C16C9891B001F910B /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
+		10038DF716E9A6B6000D5F61 /* MQFacebookDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQFacebookDetailsVC.h; sourceTree = "<group>"; };
+		10038DF816E9A6B7000D5F61 /* MQFacebookDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQFacebookDetailsVC.m; sourceTree = "<group>"; };
+		10038DFA16EB09FF000D5F61 /* MQFbCommentsDataAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQFbCommentsDataAccess.h; sourceTree = "<group>"; };
+		10038DFB16EB09FF000D5F61 /* MQFbCommentsDataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQFbCommentsDataAccess.m; sourceTree = "<group>"; };
+		10038DFD16EB0C15000D5F61 /* MQFbComments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQFbComments.h; sourceTree = "<group>"; };
+		10038DFE16EB0C15000D5F61 /* MQFbComments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQFbComments.m; sourceTree = "<group>"; };
 		1028101816E344F10030D9B5 /* MQSecondViewControllerStep2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQSecondViewControllerStep2.h; sourceTree = "<group>"; };
 		1028101916E344F10030D9B5 /* MQSecondViewControllerStep2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQSecondViewControllerStep2.m; sourceTree = "<group>"; };
 		1028101B16E3581F0030D9B5 /* MQSocialIntegratorAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQSocialIntegratorAccess.h; sourceTree = "<group>"; };
@@ -143,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				10E6D1F616D95609005CFA4D /* DataAccess */,
-				10A265E816C7A67900627C27 /* MQAppDelegate.h */,
 				10A265E916C7A67900627C27 /* MQAppDelegate.m */,
 				10A265F116C7A67900627C27 /* MainStoryboard_iPhone.storyboard */,
 				10758ABC16CBDB9000A9F570 /* MQViewController1Step2.h */,
@@ -151,6 +159,7 @@
 				10A265F416C7A67A00627C27 /* MainStoryboard_iPad.storyboard */,
 				10A265F716C7A67A00627C27 /* MQFirstViewController.h */,
 				10A265F816C7A67A00627C27 /* MQFirstViewController.m */,
+				10A265E816C7A67900627C27 /* MQAppDelegate.h */,
 				10A265FA16C7A67A00627C27 /* first.png */,
 				10A265FC16C7A67A00627C27 /* first@2x.png */,
 				10A265FE16C7A67A00627C27 /* MQSecondViewController.h */,
@@ -163,6 +172,8 @@
 				1028101916E344F10030D9B5 /* MQSecondViewControllerStep2.m */,
 				1028102116E5439F0030D9B5 /* MQEngineerViewController.h */,
 				1028102216E5439F0030D9B5 /* MQEngineerViewController.m */,
+				10038DF716E9A6B6000D5F61 /* MQFacebookDetailsVC.h */,
+				10038DF816E9A6B7000D5F61 /* MQFacebookDetailsVC.m */,
 			);
 			path = MQ163FirstShot;
 			sourceTree = "<group>";
@@ -197,6 +208,8 @@
 				10E6D1F816D9582A005CFA4D /* MQMerchandizeDataAccess.m */,
 				1028101B16E3581F0030D9B5 /* MQSocialIntegratorAccess.h */,
 				1028101C16E3581F0030D9B5 /* MQSocialIntegratorAccess.m */,
+				10038DFA16EB09FF000D5F61 /* MQFbCommentsDataAccess.h */,
+				10038DFB16EB09FF000D5F61 /* MQFbCommentsDataAccess.m */,
 			);
 			name = DataAccess;
 			sourceTree = "<group>";
@@ -210,6 +223,8 @@
 				10E8AB1016D37E9D00C4EC0A /* MQMerchandize.m */,
 				1028101E16E540120030D9B5 /* MQFacebookStory.h */,
 				1028101F16E540120030D9B5 /* MQFacebookStory.m */,
+				10038DFD16EB0C15000D5F61 /* MQFbComments.h */,
+				10038DFE16EB0C15000D5F61 /* MQFbComments.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -307,6 +322,9 @@
 				1028101D16E3581F0030D9B5 /* MQSocialIntegratorAccess.m in Sources */,
 				1028102016E540120030D9B5 /* MQFacebookStory.m in Sources */,
 				1028102316E543A00030D9B5 /* MQEngineerViewController.m in Sources */,
+				10038DF916E9A6B7000D5F61 /* MQFacebookDetailsVC.m in Sources */,
+				10038DFC16EB09FF000D5F61 /* MQFbCommentsDataAccess.m in Sources */,
+				10038DFF16EB0C15000D5F61 /* MQFbComments.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

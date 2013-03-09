@@ -10,10 +10,11 @@
 
 @interface MQFacebookStory : NSObject
 
+@property NSString *postId;
 @property NSString *title;
 @property NSString *countOfComments;
 @property NSString *countOfLikes;
 
--(id) initWithTitle:(NSString *)theTitle CommentCount: (NSString *) theCommentCount AndLikeCount: (NSString *) theLikeCount;
+-(id) initWithPostId: (NSString *) thePostId Title:(NSString *)theTitle CommentCount: (NSString *) theCommentCount AndLikeCount: (NSString *) theLikeCount;
 
 @end
