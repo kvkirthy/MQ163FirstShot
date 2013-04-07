@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[MQFirstViewController segmentedControlIndexChanged]:MQFirstViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "segmentedControl.changedSegmentControl">
+            </PersistentString>
+            <PersistentString
+               value = "segmentedControl.selectedSegmentIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MQViewController1Step2 viewDidLoad]:MQViewController1Step2.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.userName">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MQSecondViewController viewDidLoad]:MQSecondViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self.viewModel count]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MQProspectDataAccess getCustomerDataOnNetwork]:MQProspectDataAccess.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[settings objectForKey:@&quot;baseUrl&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MQFirstViewController connection:didReceiveData:]:MQFirstViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "data">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MQSocialIntegratorAccess connectionDidFinishLoading:]:MQSocialIntegratorAccess.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[exception description]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MQSecondViewController tableView:numberOfRowsInSection:]:MQSecondViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self.viewModel count]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MQFirstViewController connectionDidFinishLoading:]:MQFirstViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MQFirstViewController prepareForSegue:sender:]:MQFirstViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "segue.identifier">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
