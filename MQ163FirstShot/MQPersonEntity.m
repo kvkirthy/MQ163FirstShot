@@ -8,6 +8,8 @@
 
 #import "MQPersonEntity.h"
 
+// Encapsulates Customer or Lead.
+
 @implementation MQPersonEntity
 
 -(id) initWithName:(NSString *)theName email:(NSString *)theEmail  car: (NSString *)theCar features: (NSString *) theFeatures

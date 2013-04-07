@@ -9,12 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "MQDataAccessProtocol.h"
 
+// Encapsulates Facebook Comments Data Access.
+
 @interface MQFbCommentsDataAccess : NSObject
 {
-    NSMutableData *receivedData;
-    id<MQDataAccessProtocol> callingObject;
+    NSMutableData *receivedData; // Data Received from REST service.
+    id<MQDataAccessProtocol> callingObject; // Callback message is sent on this object. It will be a view reference.
 }
 
 -(id) initWithObject: (id<MQDataAccessProtocol>) obj;
+
+// Retreive Facebook comments from REST service, which inturn calls Graph API
 -(void) getCommentsDataOnNetworkFor: (NSString *) postId;
 @end

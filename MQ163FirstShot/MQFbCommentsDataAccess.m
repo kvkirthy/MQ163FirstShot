@@ -17,6 +17,7 @@
     return self;
 }
 
+// Retreive Facebook comments from REST service, which inturn calls Graph API
 -(void) getCommentsDataOnNetworkFor: (NSString *) postId
 {
     NSString *url = [NSString stringWithFormat:@"%@/%@%@",[[NSUserDefaults standardUserDefaults] stringForKey:@"baseApiUrl"],[[NSUserDefaults standardUserDefaults] stringForKey:@"fbCommentsUri"],postId];
@@ -41,7 +42,7 @@
     }
 }
 
-
+// Rest of the code is callback message from network operations.
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
     [receivedData setLength:0];

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+// Encapsulates Facebook Comments entity
+
 @interface MQFbComments : NSObject
 
 @property NSString* firstName;

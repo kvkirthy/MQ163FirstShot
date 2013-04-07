@@ -19,6 +19,7 @@
     return self;
 }
 
+// Get all stories on the Facebook page from REST service.
 -(void) getAllStoriesOnPage
 {
     NSString *url = [NSString stringWithFormat:@"%@/%@",[[NSUserDefaults standardUserDefaults] stringForKey:@"baseApiUrl"],[[NSUserDefaults standardUserDefaults] stringForKey:@"facebookIntegrator"]];
@@ -42,9 +43,13 @@
     }
 }
 
+// Post/Create Customer or Lead data as a POST on Facebook page.
 -(NSString*) postProspectData: (NSData *) imageData and: (NSString *) postData
 {
     @try {
+        
+        // Multipart form submit - synchronous operation to the REST service.
+        // REST service inturn posts to Facebook.
         
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc]init];
         NSString *url = [NSString stringWithFormat:@"%@/%@",[[NSUserDefaults standardUserDefaults] stringForKey:@"baseApiUrl"],[[NSUserDefaults standardUserDefaults] stringForKey:@"socialIntegrator"]];
@@ -91,6 +96,7 @@
     
 }
 
+// Create Lead
 -(void) createLeadFirstName:(NSString *)pFirstName LastName:(NSString *)pLastName
 {
     NSString *url = [NSString stringWithFormat:@"%@/%@%@",[[NSUserDefaults standardUserDefaults] stringForKey:@"baseApiUrl"],[[NSUserDefaults standardUserDefaults] stringForKey:@"createLead"],[NSString stringWithFormat:@"%@%@", pFirstName, pLastName]];
@@ -114,6 +120,8 @@
     }
 }
 
+
+/* Rest of the code is callback messages from network operation */
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
     [receivedData setLength:0];

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+// Encapsulates Facebook Post entity
+
 @interface MQFacebookStory : NSObject
 
 @property NSString *postId;

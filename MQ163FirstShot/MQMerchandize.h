@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+// Encapsulates Offers/Merchandize entity
+
 @interface MQMerchandize : NSObject
 
 @property NSString *title;

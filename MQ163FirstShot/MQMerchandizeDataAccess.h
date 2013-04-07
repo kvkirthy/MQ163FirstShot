@@ -9,13 +9,18 @@
 #import <Foundation/Foundation.h>
 @protocol MQDataAccessProtocol;
 
+// Encapsulates Merchandize data access.
+
 @interface MQMerchandizeDataAccess : NSObject
 {
-    NSMutableData *receivedData;
-    id<MQDataAccessProtocol> callingObject;
+    NSMutableData *receivedData; // Data received from REST service.
+    id<MQDataAccessProtocol> callingObject; // Callback message is sent on this object. It will be a view reference.
+ 
 }
 
 -(id) initWithObject: (id<MQDataAccessProtocol>) obj;
+
+// Get merchandize data from the REST Service
 -(void) getMerchandizeDataOnNetwork;
 
 

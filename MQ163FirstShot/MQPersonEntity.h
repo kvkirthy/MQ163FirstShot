@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+// Encapsulates Customer or Lead.
+
 @interface MQPersonEntity : NSObject
 
 @property NSString *fullName;

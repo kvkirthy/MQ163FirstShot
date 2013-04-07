@@ -8,6 +8,8 @@
 
 #import "MQMerchandize.h"
 
+// Encapsulates Offers/Merchandize entity
+
 @implementation MQMerchandize
 
 -(id) initWithTitle:(NSString *)theTitle Details:(NSString *)theDetails

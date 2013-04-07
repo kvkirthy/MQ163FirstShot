@@ -18,10 +18,15 @@
     return self;
 }
 
+/* Get Lead data from the REST service */
 -(void) getLeadsDataOnNetwork
 {
+    // Create URL string, URL Requst from it and URL connection.
+    // It's an Async call.
+    // Call backs are on SELF.
     
     NSString *url = [NSString stringWithFormat:@"%@/%@",[[NSUserDefaults standardUserDefaults] stringForKey:@"baseApiUrl"],[[NSUserDefaults standardUserDefaults] stringForKey:@"leadsApiUrl"]];
+    
     
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
     
@@ -43,8 +48,13 @@
 
 }
 
+/* Get Customer data from the REST service*/
 -(void) getCustomerDataOnNetwork
 {
+    // Create URL string, URL Requst from it and URL connection.
+    // It's an Async call.
+    // Callbacks are on SELF.
+    
     NSString *url = [NSString stringWithFormat:@"%@/%@",[[NSUserDefaults standardUserDefaults] stringForKey:@"baseApiUrl"],[[NSUserDefaults standardUserDefaults] stringForKey:@"customerApiUrl"]];
     
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
@@ -67,6 +77,7 @@
     }
 }
 
+/* rest of the implementatoin callbacks from network operations */
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {

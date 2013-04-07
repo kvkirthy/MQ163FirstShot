@@ -18,10 +18,10 @@
     IBOutlet UIImagePickerController *imagePicker;
 }
 
-@property MQMerchandize *merchandizeData;
-@property MQSocialIntegratorAccess *socialDataAccess;
+@property MQMerchandize *merchandizeData; /* merchandize data displayed on the screen - entity*/
+@property MQSocialIntegratorAccess *socialDataAccess; /* Data access with messages to post to Social Integrator service */
 
--(IBAction) selectImageClicked: (id) sender;
-- (IBAction) uploadMerchandizeData:(id)sender;
+-(IBAction) selectImageClicked: (id) sender; /* IBAction for choosing image from Photo library */
+- (IBAction) uploadMerchandizeData:(id)sender;/* IBAction for posting merchandize data on Facebook */
 
 @end

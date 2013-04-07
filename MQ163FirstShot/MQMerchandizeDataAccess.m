@@ -19,8 +19,13 @@
     return self;
 }
 
+// Get merchandize data from the REST Service
 -(void) getMerchandizeDataOnNetwork
 {
+    // Create URL string, URL Requst from it and URL connection.
+    // It's an Async call.
+    // Callbacks are on SELF.
+    
     NSString *url = [NSString stringWithFormat:@"%@/%@",[[NSUserDefaults standardUserDefaults] stringForKey:@"baseApiUrl"],[[NSUserDefaults standardUserDefaults] stringForKey:@"merchandize"]];
     
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
@@ -44,6 +49,7 @@
 }
 
 
+/* rest of the implementatoin callbacks from network operations */
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
     [receivedData setLength:0];
@@ -77,11 +83,12 @@
             MQMerchandize *merchandize = [[MQMerchandize alloc]initWithTitle:[obj objectForKey:@"Title"] Details:[obj objectForKey:@"Details"]];
             [returnData addObject:merchandize];
         }
-        
+        // this message is sent back to view.
         [callingObject returnDataObject:returnData];
 
     }
     @catch (NSException *exception) {
+        // This message is sent back to view.
         [callingObject showErrorMessage: [NSString stringWithFormat:@"Error with returned data - Possible DB connection error. %@", exception]];
     }
 }

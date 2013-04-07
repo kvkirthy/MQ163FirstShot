@@ -15,12 +15,14 @@
     IBOutlet UITextField *LastName;
     IBOutlet UIBarButtonItem *Save;
     
-    MQSocialIntegratorAccess *dataAccess;
+    MQSocialIntegratorAccess *dataAccess; /* data access with messages to interact with Social integrator REST service*/
 }
 
+// Properties for lead first name and last name. Capturing little information just to complete the flow. More data can be captured for better quality lead.
 @property NSString *theFirstName;
 @property NSString *theLastName;
 
+// Action to post/create lead
 -(IBAction)SaveButtonClicked:(id)sender;
 
 @end
